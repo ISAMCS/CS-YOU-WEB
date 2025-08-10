@@ -5,8 +5,8 @@ import styles from "styles/PC/PC.Ad.module.css";
 
 const newsArticles = [
   {
-    title: "How Recommedation Algorithms Run the World | WIRED",
-    link: "pdfs/How Recommendation Algorithms Run the World _ WIRED.pdf",
+    title: "How Recommendation Algorithms Run the World | WIRED",
+    link: "pdfs/How_Recommendation_Algorithms_Run_the_World_-_WIRED.pdf",
     image: "/Recalgo.png",
   },
   {
@@ -137,7 +137,7 @@ const Home = () => {
 
       <section className={styles.imageWrapper}>
       <img src="/advertising-banner.png" alt="Ad" className={styles.bannerImage} />
-      <img src="/CS + Adverising.jpg" alt="CS + Ad" className={styles.firstImage} />
+      <img src="/CS+Adverising.jpg" alt="CS + Ad" className={styles.firstImage} />
       <div className={styles.scrollContainer}>
           <div className={styles.scrollTextLeft}>Scroll</div>
           <div className={styles.scrollTextRight}>Down</div>

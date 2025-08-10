@@ -6,7 +6,7 @@ import styles from "styles/PC/PC.anthro.module.css";
 const newsArticles = [
   {
     title: "How New Emoji Are Changing the Pictorial Language | The Atlantic",
-    link: "/pdfs/How New Emoji Are Changing the Pictorial Language - The Atlantic.pdf",
+    link: "/pdfs/How_New_Emoji_Are_Changing_the_Pictorial_Language_-_The_Atlantic.pdf",
     image: "/emoji.png",
   },
   {
@@ -163,7 +163,7 @@ const Home = () => {
 
       <section className={styles.imageWrapper}>
       <img src="/anthropology-banner.png" alt="anthro" className={styles.bannerImage} />
-      <img src="/CS + anthro.jpg" alt="CS + Anthro" className={styles.firstImage} />
+      <img src="/CS+anthro.jpg" alt="CS + Anthro" className={styles.firstImage} />
       <div className={styles.scrollContainer}>
           <div className={styles.scrollTextLeft}>Scroll</div>
           <div className={styles.scrollTextRight}>Down</div>

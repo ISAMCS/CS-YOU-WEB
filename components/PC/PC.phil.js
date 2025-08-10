@@ -6,12 +6,12 @@ import styles from "styles/PC/PC.phil.module.css";
 const newsArticles = [
   {
     title: "Google Sidelines Engineer Who Claims Its A.I. Is Sentient | The New York Times",
-    link: "pdfs/Google Sidelines Engineer Who Claims Its A.I. Is Sentient - The New York Times.pdf",
+    link: "pdfs/Google_Sidelines_Engineer_Who_Claims_Its_A.I._Is_Sentient_-_The_New_York_Times.pdf",
     image: "/google.png",
   },
   {
     title: "COMPUTING MACHINERY AND INTELLIGENCE | Alan Turing - Pages 1 - 8",
-    link: "pdfs/Turing pages 1-8.pdf",
+    link: "pdfs/Turing_pages_1-8.pdf",
     image: "/turing.png",
   },
  {
@@ -207,7 +207,7 @@ const Home = () => {
 
       <section className={styles.imageWrapper}>
       <img src="/philosophy-banner.png" alt="phil" className={styles.bannerImage} />
-      <img src="/CS + Philo.jpg" alt="CS + phil" className={styles.firstImage} />
+      <img src="/CS+Philo.jpg" alt="CS + phil" className={styles.firstImage} />
       <div className={styles.scrollContainer}>
           <div className={styles.scrollTextLeft}>Scroll</div>
           <div className={styles.scrollTextRight}>Down</div>

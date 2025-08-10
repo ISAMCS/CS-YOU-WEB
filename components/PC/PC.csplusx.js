@@ -79,7 +79,7 @@ const Home = () => {
         <div className={styles.semiTransparentBlock}>
           <img src="/CS_Banner.png" alt="CS Banner" className={styles.bannerImage} />
         </div>
-        <img src="/CS_+_education.jpg" alt="CS + Education" className={styles.firstImage} />
+        <img src="/CS+education.jpg" alt="CS + Education" className={styles.firstImage} />
         <div className={styles.scrollContainer}>
           <div className={styles.scrollTextLeft}>Scroll</div>
           <div className={styles.scrollTextRight}>Down</div>

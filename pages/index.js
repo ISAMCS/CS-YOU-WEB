@@ -15,7 +15,7 @@ function useDeviceType() {
       const width = window.innerWidth;
       if (width < 768) {
         setDeviceType('mobile');
-      } else if (width >= 768 && width <= 1380) {
+      } else if (width >= 768 && width <= 1376) {
         setDeviceType('tablet');
       } else {
         setDeviceType('desktop');

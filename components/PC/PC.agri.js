@@ -105,7 +105,7 @@ const Home = () => {
 
       <section className={styles.imageWrapper}>
       <img src="/cropsciences-banner.png" alt="crop" className={styles.bannerImage} />
-      <img src="/CS+Crop Sciences.jpg" alt="CS + Crop" className={styles.firstImage} />
+      <img src="/CS+Crop_Sciences.jpg" alt="CS + Crop" className={styles.firstImage} />
       <div className={styles.scrollContainer}>
           <div className={styles.scrollTextLeft}>Scroll</div>
           <div className={styles.scrollTextRight}>Down</div>

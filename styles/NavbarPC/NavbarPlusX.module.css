@@ -56,6 +56,7 @@
 
 .item {
   text-decoration: none;
+  border: #1f3d5d 5px solid;
   color: #ffffff;
   font-weight: bold;
   background-color: #ffffff;
@@ -113,7 +114,7 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 1366px) and (min-width: 100px) {
+@media (max-width: 1370px) and (min-width: 100px) {
   .navbar {
     position: relative;
     display: flex;
@@ -156,6 +157,7 @@
   .item:hover {
     background-color: #ffffff;
     color: #ffffff;
+
     border: 5px solid #13294b;
     text-shadow:
       -2px -2px 0 #13294b,
@@ -190,6 +192,7 @@
     height: 100%;
     font-size: clamp(0.9rem, 1.7vw, 3rem);
     padding: 0.5rem;
+    
     box-sizing: border-box;
     display: flex;
     justify-content: center;

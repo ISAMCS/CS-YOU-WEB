@@ -6,12 +6,12 @@ import styles from "styles/PC/PC.phil.module.css";
 const newsArticles = [
   {
     title: "Google Sidelines Engineer Who Claims Its A.I. Is Sentient | The New York Times",
-    link: "pdfs/google-sentient-ai.pdf",
+    link: "/pdfs/google-sentient-ai.pdf",
     image: "/google.png",
   },
   {
     title: "COMPUTING MACHINERY AND INTELLIGENCE | Alan Turing - Pages 1 - 8",
-    link: "pdfs/turing-pages.pdf",
+    link: "/pdfs/turing-pages.pdf",
     image: "/turing.png",
   },
  {

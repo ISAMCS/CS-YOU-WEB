@@ -4,12 +4,12 @@ import React, { useState, useEffect } from "react";
 const newsArticles = [
   {
     title: "Robots Can Make Music, but Can They Sing? | The New York Times",
-    link: "pdfs/robots-music.pdf",
+    link: "/pdfs/robots-music.pdf",
     image: "/robots.png",
   },
   {
     title: "The Moog Synthesizer Makes a Comeback | The New York Times",
-    link: "pdfs/moog-synthesizer.pdf",
+    link: "/pdfs/moog-synthesizer.pdf",
     image: "/moogs.png",
   },
   {

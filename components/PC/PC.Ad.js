@@ -6,17 +6,17 @@ import styles from "styles/PC/PC.Ad.module.css";
 const newsArticles = [
   {
     title: "How Recommendation Algorithms Run the World | WIRED",
-    link: "pdfs/recommendation-algorithms.pdf",
+    link: "/pdfs/recommendation-algorithms.pdf",
     image: "/Recalgo.png",
   },
   {
     title: "Opinion - You Are Now Remotely Controlled | The New York Times",
-    link: "pdfs/remotely-controlled.pdf",
+    link: "/pdfs/remotely-controlled.pdf",
     image: "/controlled.png",
   },
   {
     title: "Opinion - You Are the Object of Facebook's Secret Extraction Operation | The New York Times",
-    link: "pdfs/facebook-extraction.pdf",
+    link: "/pdfs/facebook-extraction.pdf",
     image: "/facebook.png",
   },
   {

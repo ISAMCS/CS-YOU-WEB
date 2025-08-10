@@ -267,8 +267,7 @@ const Home = () => {
       {/* Learning Section */}
 
       <section className={styles.learningSection2}>
-        <div className={styles.practiceText}>Practice Makes Perfect!</div>
-          <div className={styles.practiceText}>Practice Makes Perfect!</div>
+        <div className={styles.practiceText}>Practice Makes Perfect! <br /> Practice Makes Perfect!</div>
 
           <div className={styles.learningCardColumn}>
               {projectContents.map((project, idx) => (

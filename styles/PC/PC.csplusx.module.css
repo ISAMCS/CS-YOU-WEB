@@ -295,7 +295,7 @@
 }
 
 .BlueHeading {
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
   color: #FF5F05;
   text-shadow: 0 2px 8px rgba(255, 152, 0, 0.15);
   font-family: "Finger Paint";
@@ -316,9 +316,10 @@
   border: 0;
   margin: 2rem auto;
   display: block;
+  touch-action: pan-y;
 }
 
-@media (min-width: 800px) and (max-width: 1400px) {
+@media (min-width: 800px) and (max-width: 1000px) {
   .googleSlidesIframe {
     width: 100%;
     height: 90vh;
@@ -330,8 +331,18 @@
 
 @media (min-width: 1000px) and (max-width: 1400px) {
   .googleSlidesIframe {
+    width: 80%;
+    height: 60vh;
+    border: 0;
+    margin: 2rem auto;
+    display: block;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 800px)  {
+  .googleSlidesIframe {
     width: 75%;
-    height: 80vh;
+    height: 35vh;
     border: 0;
     margin: 2rem auto;
     display: block;
@@ -356,7 +367,7 @@
 }
 
 .carouselHeading {
-  padding-bottom: 1em;
+  padding-bottom: .5em;
   padding-top: 0em;
   text-shadow: 0 2px 8px rgba(255, 152, 0, 0.15);
   font-family: "Finger Paint";
@@ -375,7 +386,7 @@
 .videoList {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;

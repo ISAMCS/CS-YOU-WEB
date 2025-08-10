@@ -353,8 +353,7 @@ const Home = () => {
       {/* Learning Section */}
 
       <section className={styles.learningSection2}>
-        <div className={styles.practiceText}>Practice Makes Perfect!</div>
-        <div className={styles.practiceText}>Practice Makes Perfect!</div>
+        <div className={styles.practiceText}>Practice Makes Perfect! <br /> Practice Makes Perfect!</div>
         <div className={styles.instructionText}>
           Please Make a Copy of the Google Doc by going to "File" and "Save a Copy in Drive"
         </div>

@@ -6,7 +6,7 @@ import styles from "styles/PC/PC.anthro.module.css";
 const newsArticles = [
   {
     title: "How New Emoji Are Changing the Pictorial Language | The Atlantic",
-    link: "pdfs/emoji-language.pdf",
+    link: "/pdfs/emoji-language.pdf",
     image: "/emoji.png",
   },
   {
@@ -398,8 +398,7 @@ const Home = () => {
       {/* Learning Section */}
 
       <section className={styles.learningSection2}>
-        <div className={styles.practiceText}>Practice Makes Perfect!</div>
-        <div className={styles.practiceText}>Practice Makes Perfect!</div>
+        <div className={styles.practiceText}>Practice Makes Perfect! <br /> Practice Makes Perfect!</div>
         <div className={styles.instructionText}>
           Please Make a Copy of each Google Colab Module and Google Doc by going to "File" and "Save a Copy in Drive"
         </div>

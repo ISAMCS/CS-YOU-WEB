@@ -742,7 +742,6 @@
   text-align: left;
 }
 
-
 @media (max-width: 700px) {
   .dinnerRow {
     display: flex;
@@ -1214,5 +1213,9 @@
   .learningText {
     font-size: 1.2rem;
     left: 1%
+  }
+
+  .learningCardColumn {
+   padding-top: 0rem;
   }
 }

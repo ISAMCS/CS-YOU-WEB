@@ -6,7 +6,7 @@ import styles from "styles/PC/PC.anthro.module.css";
 const newsArticles = [
   {
     title: "How New Emoji Are Changing the Pictorial Language | The Atlantic",
-    link: "/pdfs/How_New_Emoji_Are_Changing_the_Pictorial_Language_-_The_Atlantic.pdf",
+    link: "pdfs/How_New_Emoji_Are_Changing_the_Pictorial_Language_-_The_Atlantic.pdf",
     image: "/emoji.png",
   },
   {

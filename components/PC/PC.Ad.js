@@ -6,12 +6,12 @@ import styles from "styles/PC/PC.Ad.module.css";
 const newsArticles = [
   {
     title: "How Recommendation Algorithms Run the World | WIRED",
-    link: "pdfs/How_Recommendation_Algorithms_Run_the_World_-_WIRED.pdf",
+    link: "pdfs/Ho_Recommendation_Algorithms_Run_the_World _ WIRED.pdf",
     image: "/Recalgo.png",
   },
   {
     title: "Opinion - You Are Now Remotely Controlled | The New York Times",
-    link: "/pdfs/Opinion-_-You-Are-Now-Remotely-Controlled-The-New-York-Times.pdf",
+    link: "pdfs/Opinion-_-You-Are-Now-Remotely-Controlled-The-New-York-Times.pdf",
     image: "/controlled.png",
   },
   {

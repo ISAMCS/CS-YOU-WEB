@@ -4,22 +4,22 @@ import React, { useState, useEffect } from "react";
 const newsArticles = [
   {
     title: "Robots Can Make Music, but Can They Sing? | The New York Times",
-    link: "/Robots Can Make Music, but Can They Sing_ - The New York Times.pdf",
+    link: "pdfs/Robots Can Make Music, but Can They Sing_ - The New York Times.pdf",
     image: "/robots.png",
   },
   {
     title: "The Moog Synthesizer Makes a Comeback | The New York Times",
-    link: "/The Moog Synthesizer Makes a Comeback - The New York Times.pdf",
+    link: "pdfs/The Moog Synthesizer Makes a Comeback - The New York Times.pdf",
     image: "/moogs.png",
   },
   {
     title: "From Jingles to Pop Hits, A.I. Is Music to Some Ears | The New York Times",
-    link: "/From Jingles to Pop Hits, A.I. Is Music to Some Ears - The New York Times.pdf",
+    link: "pdfs/From Jingles to Pop Hits, A.I. Is Music to Some Ears - The New York Times.pdf",
     image: "/jingles.png",
   },
   {
     title: "MUSIC; Teaching the Ear New Dialects of Sound | The New York Times",
-    link: "/Teaching the Ear New Dialects of Sound - The New York Times.pdf",
+    link: "pdfs/Teaching the Ear New Dialects of Sound - The New York Times.pdf",
     image: "/music.png",
   },
   // Add more articles here as needed

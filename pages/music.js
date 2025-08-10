@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Mobile from "OLD/Mobile.music";
 import PC from "components/PC/PC.music";
 import Navbar from "components/Navbar/NavbarMus";
 

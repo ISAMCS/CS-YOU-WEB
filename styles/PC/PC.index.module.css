@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Chewy&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Finger+Paint&family=Luckiest+Guy&display=swap');
+
+.indexContainer {
+  font-family: "Finger Paint";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main Content Section */
+
+.indexMainContent {
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(50px, 2vw, 100px);
+  gap: clamp(50px, 2vw, 100px);
+}
+
+.leftSection {
+  flex: 1;
+}
+
+.chartImage {
+  width: auto;
+  max-width: 46.9vw;
+}
+
+.rightSection {
+  flex: 1;
+  max-width: 31.2vw;
+  border: 2px solid #0a369c;
+  padding: clamp(25px, 2vw, 50px);
+  border-radius: clamp(5px, 1vw, 10px);
+  background-color: #0a369c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  text-align: center;
+}
+  
+.rightSection h2 {
+  font-size: clamp(14px, 2vw, 28px);
+  margin-bottom: clamp(10px, 1vw, 20px);
+  color: #eeeeeeff;
+  text-shadow:
+  -2px -2px 0 #000,
+   2px -2px 0 #000,
+  -2px  2px 0 #000,
+   2px  2px 0 #000,
+  -2px  0px 0 #000,
+   2px  0px 0 #000,
+   0px  2px 0 #000,
+   0px -2px 0 #000;
+}
+ 
+.rightSection p {
+  font-size: clamp(9px, 1vw, 18px);
+  margin-bottom: clamp(15px, 2vw, 30px);
+  color:#eeeeeeff;
+  font-family: "Comic Neue";
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  text-align: center;
+}
+  
+.exploreButton {
+  background-color: #ff6600;
+  color:#eeeeeeff;
+  border: none;
+  padding: clamp(7px, 1.5vw, 15px) clamp(15px, 3vw, 30px);
+  border-radius: clamp(4px, 1vw, 8px);
+  font-size: clamp(9px, 1vw, 18px);
+  font-family: "Finger Paint";
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+  
+.exploreButton:hover {
+  background-color:#FF5F05;
+}
+
+/* Carousel Section */
+
+.carouselSection {
+  text-align: center;
+  margin: clamp(25px, 5vh, 50px) auto;
+  position: relative;
+  width: 100%;
+  max-width: 80vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carouselSection h2{
+  color: #0a369c;
+  text-shadow:
+    -1px -1px 0 #f1750c,
+    1px -1px 0 #f1750c,
+    -1px 1px 0 #f1750c,
+    1px 1px 0 #f1750c;
+  font-size: clamp(1.5rem, 4vw, 6rem);
+}
+
+.padding {
+  padding: 4vh;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+  justify-content: center;
+  gap: clamp(5px, 1vw, 10px);
+  align-items: center;
+  overflow: visible;
+}
+
+.cells {
+  flex: 1;
+  max-width: 33.33%;
+  aspect-ratio: 1 / 1; 
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  border-radius: clamp(5px, 1vw, 10px);
+}
+  
+.cells img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: clamp(5px, 1vw, 10px);
+  box-shadow: 0 0.37vh 0.55vh rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+  
+.cells::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: clamp(5px, 1vw, 10px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+  
+.cells:hover::before {
+  opacity: 1;
+}
+
+.cells:hover img {
+  transform: scale(1.05);
+}
+
+.hoverText {
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #eeeeeeff;
+  font-size: clamp(20px, 5vw, 100px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 6;
+}
+
+.hoverText p {
+  font-size: clamp(0.8rem, 4vw, 3rem);
+  font-family: "Finger Paint";
+}
+
+.cells:hover .hoverText {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+
+  .cells:hover img {
+    transform: none;
+  }
+}
+
+/* Meet the Team Section */
+
+.meetTheTeamSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(10px, 2vw, 20px);
+}
+
+.meetTheTeamSection h2{
+  color: #0a369c;
+  text-shadow:
+    -1px -1px 0 #f1750c,
+    1px -1px 0 #f1750c,
+    -1px 1px 0 #f1750c,
+    1px 1px 0 #f1750c;
+  font-size: clamp(1.5rem, 4vw, 6rem);
+}
+
+.teamCarousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 80vw;
+  justify-content: center;
+  gap: clamp(1px, 1vw, 1rem);
+  align-items: center;
+  overflow: visible;
+}
+
+.teamCells {
+  flex: 1;
+  max-width: 60vw;
+  aspect-ratio: 3 / 4;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  border-radius: clamp(5px, 1vw, 10px);
+}
+
+.teamCells.current {
+  flex: 1;
+  max-width: 60vw;
+  aspect-ratio: 3 / 4;
+  height: auto; 
+  opacity: 1;
+  z-index: 2;
+}
+
+.teamCells:hover .Headshot {
+  filter: blur(5px);
+}
+
+.teamCells.blur {
+  filter: blur(5px);
+  opacity: 0.5;
+}
+
+.teamCells.blur:hover {
+  filter: none;
+  opacity: 1;
+}
+
+.teamCells img,
+.Headshot {
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 800px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: clamp(5px, 1vw, 10px);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.headshotWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 800px;
+}
+
+.Headshot {
+  position: relative;
+  z-index: 1;
+}
+
+.teamCells.current:hover .headshotWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  border-radius: clamp(5px, 1vw, 10px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.name {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: 2;
+  top: 35%;
+  color: #eeeeeeff;
+  font-weight: bolder;
+  font-size: clamp(16px, 2vw, 30px);
+  pointer-events: none;
+  line-height: 1.2;
+}
+
+.position {
+  font-family: "Comic Neue";
+  position: absolute;
+  width: 65%;
+  text-align: center;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: 2;
+  top: 50%;
+  color: #eeeeeeff;
+  font-weight: bold;
+  font-size: clamp(12px, 1.5vw, 20px);
+  margin-bottom: 0;
+  pointer-events: none;
+  line-height: 1.2;
+}
+
+.teamCells:hover .name,
+.teamCells:hover .position {
+  opacity: 1;
+}
+
+/* Illinois Banner Section */
+
+.illinoisBannerSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+  
+.orangeRectangle {
+  background-color: #FF5F05;
+  width: 100%;
+  max-width: 62.5vw;
+  height: 23.1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: clamp(6px, 1.5vw, 12px);
+  position: relative;
+  box-shadow: 0 0.37vh 0.74vh rgba(0, 0, 0, 0.2);
+}
+  
+.illinoisBannerImage {
+  max-height: 90%;
+  max-width: 95%;
+  object-fit: contain;
+}
+
+/* Questions Section */
+
+.questionsSection {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: clamp(1rem, 4vw, 2rem);
+  background-color: #eeeeeeff;
+  border-radius: clamp(4px, 1vw, 8px);
+  box-shadow: 0 0.37vh 0.74vh rgba(0, 0, 0, 0.1);
+}
+  
+.questionsSection h2 {
+  font-size: clamp(16px, 2vw, 24px);
+  color: #0a369c;
+  margin-bottom: 1rem;
+}
+
+.questionsSection p {
+  font-family: "Comic Neue";
+  font-size: clamp(12px, 2vw, 18px);
+  color: #0a369c;
+  margin: 0.5rem 0;
+}
+
+.questionsSection a {
+  color: #ff6600;
+  text-decoration: none;
+}
+  
+.questionsSection a:hover {
+  text-decoration: underline;
+}

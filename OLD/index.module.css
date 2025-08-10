@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
+
+.indexContainer {
+  font-family: "Fredoka", sans-serif;
+  align-items: center;
+}
+  
+.imageWrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.siebelImage {
+  object-fit: cover;
+  object-position: center;
+}
+  
+.indexMainContent {
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(50px, 2vw, 100px);
+  gap: clamp(50px, 2vw, 100px);
+}
+  
+.leftSection {
+  flex: 1;
+}
+
+.chartImage {
+  width: auto;
+  max-width: 46.9vw;
+}
+  
+.rightSection {
+  flex: 1;
+  max-width: 31.2vw;
+  border: 2px solid #0033cc;
+  padding: clamp(25px, 2vw, 50px);
+  border-radius: clamp(5px, 1vw, 10px);
+  background-color: #0a369c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  text-align: center;
+}
+  
+.rightSection h2 {
+  font-size: clamp(14px, 2vw, 28px);
+  margin-bottom: clamp(10px, 1vw, 20px);
+  color: white;
+}
+
+  
+.rightSection p {
+  font-size: clamp(9px, 1vw, 18px);
+  margin-bottom: clamp(15px, 2vw, 30px);
+  color: white;
+}
+  
+.exploreButton {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: clamp(7px, 1.5vw, 15px) clamp(15px, 3vw, 30px);
+  border-radius: clamp(4px, 1vw, 8px);
+  font-size: clamp(9px, 1vw, 18px);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+  
+.exploreButton:hover {
+  background-color: #cc5200;
+}
+
+.padding {
+  padding: 10vh;
+}  
+
+.hoverOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+  
+.PhilImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: clamp(5px, 1vw, 10px);
+  box-shadow: 0 0.37vh 0.55vh rgba(0, 0, 0, 0.1);
+}
+  
+.prevButton,
+.nextButton {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+  
+.hidden {
+  display: none;
+}
+
+.carouselSection {
+  font-family: "Fredoka", sans-serif;
+  text-align: center;
+  margin: clamp(25px, 5vh, 50px) auto;
+  position: relative;
+  width: 100%;
+  max-width: 62.5vw; /* 1200px */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+  justify-content: center;
+  gap: clamp(5px, 1vw, 10px);
+  align-items: center;
+  overflow: visible;
+}
+
+.cells {
+  flex: 1;
+  max-width: 33.33%;
+  height: 37vh; /* Approx. 400px */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  border-radius: clamp(5px, 1vw, 10px);
+}
+  
+.cells img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: clamp(5px, 1vw, 10px);
+  box-shadow: 0 0.37vh 0.55vh rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+  
+.cells::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: clamp(5px, 1vw, 10px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+  
+.cells:hover::before {
+  opacity: 1;
+}
+
+.cells:hover img {
+  transform: scale(1.05);
+}
+
+.hoverText {
+  font-family: "Fredoka", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: clamp(20px, 5vw, 100px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 6;
+}
+  
+.cells:hover .hoverText {
+  opacity: 1;
+}
+
+.meetTheTeamSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(10px, 2vw, 20px);
+}
+  
+.teamCarousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 60vw;
+  justify-content: center;
+  gap: clamp(5px, 1vw, 10px);
+  align-items: center;
+  overflow: visible;
+}
+
+.teamCells.blur {
+  filter: blur(5px);
+  opacity: 0.5;
+}
+
+.teamCells.blur:hover {
+  filter: none;
+  opacity: 1;
+}
+
+.teamCells img,
+.Headshot {
+  width: 100%; /* Ensures the image fills the container width */
+  height: 100%; /* Ensures the image fills the container height */
+  max-width: 350px; /* Increased width for cropping */
+  max-height: 450px; /* Increased height for cropping */
+  object-fit: cover; /* Crops the image to fit the specified dimensions */
+  object-position: center; /* Centers the cropped area */
+  border-radius: clamp(5px, 1vw, 10px); /* Matches the container's border radius */
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.teamCells {
+  flex: 1;
+  max-width: 30vw;
+  height: 70vh; /* Standardized height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  overflow: hidden; /* Ensures content outside the cell is hidden */
+  position: relative;
+  border-radius: clamp(5px, 1vw, 10px);
+}
+
+.teamCells.current {
+  flex: 1; /* Ensures the same size as other cells */
+  max-width: 30vw;
+  height: 70vh; /* Matches the height of other cells */
+  filter: none;
+  opacity: 1;
+  z-index: 2;
+}
+
+.teamCells:hover .Headshot {
+  filter: blur(5px); /* Adds a blur effect on hover */
+}
+  
+.name {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: 2;
+  top: 40%;
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: clamp(16px, 2vw, 30px);
+}
+  
+.position {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: 2;
+  top: 50%;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: clamp(12px, 1.5vw, 20px);
+  margin-bottom: clamp(10px, 2vh, 20px);
+}
+  
+.teamCells:hover .name,
+.teamCells:hover .position {
+  opacity: 1;
+}
+
+.illinoisBannerSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+  
+.orangeRectangle {
+  background-color: #ff6600;
+  width: 100%;
+  max-width: 62.5vw; /* 1200px */
+  height: 23.1vh; /* 250px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: clamp(6px, 1.5vw, 12px);
+  position: relative;
+  box-shadow: 0 0.37vh 0.74vh rgba(0, 0, 0, 0.2);
+}
+  
+.illinoisBannerImage {
+  max-height: 90%;
+  max-width: 95%;
+  object-fit: contain;
+}
+
+.questionsSection {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: clamp(1rem, 4vw, 2rem);
+  background-color: #f5f5f5;
+  border-radius: clamp(4px, 1vw, 8px);
+  box-shadow: 0 0.37vh 0.74vh rgba(0, 0, 0, 0.1);
+}
+  
+.questionsSection h2 {
+  font-size: clamp(16px, 2vw, 24px);
+  color: #0033cc;
+  margin-bottom: 1rem;
+}
+
+.questionsSection p {
+  font-size: clamp(12px, 2vw, 18px);
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.questionsSection a {
+  color: #ff6600;
+  text-decoration: none;
+}
+  
+.questionsSection a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .indexMainContent {
+    flex-direction: column;
+    align-items: stretch;
+    gap: clamp(20px, 4vw, 40px);
+    padding: clamp(20px, 4vw, 40px);
+  }
+
+  .leftSection,
+  .rightSection {
+    max-width: 100vw;
+    width: 100%;
+  }
+
+  .chartImage {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+}

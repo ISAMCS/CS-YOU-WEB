@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
+
+.indexContainer {
+  margin-top: 50px;
+  font-family: "Fredoka", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100vw;
+  height: 45vw;
+  min-height: 120px;
+  max-height: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.headingText {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color:#0a369c;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.objectivesList {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  padding: 1.5rem 2rem 1.5rem 2.5rem;
+  font-family: "Fredoka", sans-serif;
+  font-size: 1rem;
+  color:#0a369c;
+  list-style: disc inside;
+  line-height: 1.7;
+}
+
+.objectivesList li {
+  margin-bottom: 0.75rem;
+  padding-left: 0.5rem;
+  text-indent: -1.5em;
+  padding-left: 2em;
+}
+
+.fullOrangeBackground {
+  width: 100vw;
+  min-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background: #ff6600;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.fullBlueBackground {
+  width: 100vw;
+  min-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background:#0a369c;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.BlueHeading {
+  font-family: "Fredoka", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #eeeeeeff;
+  text-shadow: 0 2px 8px rgba(255, 152, 0, 0.15);
+}
+
+.BlueContent {
+  max-width: 75vw;
+  margin: 0 auto;
+  color: #eeeeeeff;
+  padding: 2.5rem 2rem 2.5rem 2.5rem;
+}
+
+.fulltanBackground {
+  width: 100vw;
+  min-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background:#f8f8f8;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.tanContent {
+  max-width: 90vw;
+  margin: 0 auto;
+  color: #222;
+  padding: 2.5rem 2rem;
+}
+
+.carouselSection {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.carouselHeading {
+  font-family: "Fredoka", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #FF5F05;
+  text-align: center;
+}
+
+.carouselTrackScrollable {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+  width: 100vw;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  padding-right: 75vw;
+}
+
+.carouselCell {
+  min-width: 70vw;
+  max-width: 75vw;
+  flex: 0 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  scroll-snap-align: start;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.activeCell {
+  left: 50%;
+  transform: translateX(-60%) scale(1.15);
+  width: 600px;
+  height: 70vh;
+  z-index: 2;
+  box-shadow: 0 8px 32px rgba(226,108,11,0.18);
+  opacity: 1;
+  cursor: default;
+  filter: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.videoWrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.videoWrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.carouselDesc {
+  padding: 0.5rem 1rem 1rem 1rem;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.videoList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.videoListCell {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.orangeContent {
+  max-width: 75vw;
+  margin: 0 auto;
+  color: #eeeeeeff;
+  padding: 2.5rem 2rem 2.5rem 2.5rem;
+}
+
+.orangeHeading {
+  font-family: "Fredoka", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color:#eeeeeeff;
+  text-shadow: 0 2px 8px rgba(255, 152, 0, 0.15);
+}
+
+.orangeList {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  list-style: disc inside;
+  margin: 0 auto;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+.orangeList li {
+  margin-bottom: 0.85rem;
+  text-indent: -1.5em;
+  padding-left: 2em;
+}
+
+.endList {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  list-style: disc inside;
+  margin-left: 10%;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+.endList li {
+  margin-bottom: 0.85rem;
+  text-indent: -1.5em; 
+  padding-left: 2em;
+}
+
+.semiTransparentBlock {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  max-width: 400px;
+  height: calc(90vw * 0.75);
+  max-height: 300px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.firstImage {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  max-width: 400px;
+  height: calc(90vw * 0.8);
+  max-height: 300px;
+  object-fit: contain;
+  z-index: 1;
+  background: transparent;
+}
+
+.bannerImage {
+  position: relative;
+  display: block;
+  margin: 50px auto 0 auto;
+  width: 90vw;
+  max-width: 400px;
+  height: auto;
+  z-index: 3;
+  object-fit: contain;
+}
+
+.padding {
+  padding: 10vh;
+}
+
+.scrollContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+  width: 100%;
+}
+
+.scrollTextRight {
+  font-size: 24px;
+  font-weight: bold;
+  color:#0a369c;
+  opacity: 0;
+  top: 10px;
+  animation: fadeInLeft 1.5s forwards ease-in-out;
+  position: absolute;
+  left: 250px;
+  z-index: 4;
+}
+
+.scrollTextLeft {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FF5F05;
+  opacity: 0;
+  animation: fadeInRight 1.5s forwards ease-in-out;
+  position: absolute;
+  bottom: 110px;
+  right: 250px;
+  z-index: 4;
+}
+
+.arrowContainer {
+  position: absolute;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 5;
+}
+
+.bigBlueText {
+  margin-top: 60px;
+  font-family: "Fredoka", sans-serif;
+  color:#0a369c;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.arrowVisible {
+  opacity: 1;
+}
+
+/* Keyframes for Fade In */
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

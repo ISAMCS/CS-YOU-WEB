@@ -6,12 +6,12 @@ import styles from "styles/PC/PC.phil.module.css";
 const newsArticles = [
   {
     title: "Google Sidelines Engineer Who Claims Its A.I. Is Sentient | The New York Times",
-    link: "pdfs/Google_Sidelines_Engineer_Who_Claims_Its_A.I._Is_Sentient_-_The_New_York_Times.pdf",
+    link: "pdfs/google-sentient-ai.pdf",
     image: "/google.png",
   },
   {
     title: "COMPUTING MACHINERY AND INTELLIGENCE | Alan Turing - Pages 1 - 8",
-    link: "pdfs/Turing_pages_1-8.pdf",
+    link: "pdfs/turing-pages.pdf",
     image: "/turing.png",
   },
  {
@@ -36,7 +36,7 @@ const newsArticles = [
   },
    {
     title: "Serious Concerns That AI Self-Driving Cars Cybersecurity Will Be A Hacker Leak Like An Open Sieve | Forbes",
-    link: "/pdfs/carshacker.pdf",
+    link: "pdfs/carshacker.pdf",
     image: "/hackerscars.png",
   },
  {

@@ -5,12 +5,12 @@ import Link from "next/link";
 const newsArticles = [
   {
     title: "OpenAI's Realistic Text-Generating \n AI Triggers Ethics Concerns | Forbes",
-    link: "pdfs/OpenAI's_Realistic_Text-Generating_AI_Triggers_Ethics_Concerns.pdf",
+    link: "pdfs/openai-ethics.pdf",
     image: "/OpenAI header.png",
   },
   {
     title: "Why a Conversation With Bing's \n Chatbot Left Me Deeply Unsettled \n | The New York Times",
-    link: "pdfs/Why_a_Conversation_With_Bing's_Chatbot_Left_Me_Deeply_Unsettled_-_The_New_York_Times.pdf",
+    link: "pdfs/bing-chatbot.pdf",
     image: "/bing header.png",
   },
   {

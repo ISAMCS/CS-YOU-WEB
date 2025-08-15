@@ -339,7 +339,7 @@
   max-width: 2000px;
   background: url('/news2.jpg') center/cover no-repeat;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  border: 5px solid #000;
+  border: clamp(0.1rem, 0.5vw, 0.4rem) solid #000;
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
@@ -377,7 +377,7 @@
   border-radius: 1.5%;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   padding: 2rem 2rem;
-  border: 5px solid #000;
+  border: clamp(0.1rem, 0.5vw, 0.4rem) solid #000;
   box-sizing: border-box;
 }
 
@@ -488,7 +488,7 @@
   aspect-ratio: 4/3;
   background: url('/audience.jpg') center/cover no-repeat;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  border: 5px solid #000;
+  border: clamp(0.1rem, 0.5vw, 0.4rem) solid #000;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -638,7 +638,7 @@
   max-width: 2000px;
   background: url('/music-background.png') center/cover no-repeat;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  border: 5px solid #000;
+  border: clamp(0.1rem, 0.5vw, 0.4rem) solid #000;
   box-sizing: border-box;
   overflow: hidden;
   display: flex;

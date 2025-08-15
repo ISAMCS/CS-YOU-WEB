@@ -12,12 +12,12 @@ import lennyHeadshot from "public/Lenny.png";
 import Link from "next/link";
 
 const carouselImages = [
-  { src: "/agri.png", alt: "Agriculture", text: "CS +<br />Crop Sciences", link: "/crop-sciences" },
-  { src: "/anthro.jpg", alt: "Anthropology", text: "CS +<br />Anthropology", link: "/anthropology" },
-  { src: "/dictionary.jpg", alt: "Dictionary", text: "CS +<br />Linguistics", link: "/linguistics" },
-  { src: "/SchoolsOfAthens.jpg", alt: "Schools of Athens", text: "CS +<br />Philosophy", link: "/philosophy" },
-  { src: "/socials.png", alt: "Social Media", text: "CS +<br />Advertising", link: "/advertising" },
-  { src: "/child playing piano.jpg", alt: "Music", text: "CS +<br />Music", link: "/music" }
+  { src: "/agri.png", alt: "Agriculture", text: "CS +<br />Crop Sciences", link: "/Crop-Sciences" },
+  { src: "/anthro.jpg", alt: "Anthropology", text: "CS +<br />Anthropology", link: "/Anthropology" },
+  { src: "/dictionary.jpg", alt: "Dictionary", text: "CS +<br />Linguistics", link: "/Linguistics" },
+  { src: "/SchoolsOfAthens.jpg", alt: "Schools of Athens", text: "CS +<br />Philosophy", link: "/Philosophy" },
+  { src: "/socials.png", alt: "Social Media", text: "CS +<br />Advertising", link: "/Advertising" },
+  { src: "/child playing piano.jpg", alt: "Music", text: "CS +<br />Music", link: "/Music" }
 ];
 
 const teamMembers = [

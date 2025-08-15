@@ -62,7 +62,7 @@
   background: linear-gradient(90deg, #fff9c4 0%, #ffd1dc 100%);
   padding: clamp(0.4rem, 0.8vw, 0.6rem) clamp(0.8rem, 1.5vw, 1.2rem);
   font-size: clamp(1em, 1vw, 2rem);
-  border: 5px solid #ffffff;
+  border: clamp(0.1rem, 0.5vw, 0.4rem)  solid #ffffff;
   transition: background-color 0.3s ease, color 0.3s ease;
   white-space: nowrap;
   text-shadow:
@@ -160,7 +160,7 @@
     justify-content: center;
     padding-top: 2vh;
     padding-bottom: 2vh;
-    border: white 5px solid;
+    border: white clamp(0.1rem, 0.5vw, 0.4rem)  solid;
   }
 
   .navbarMobile {
@@ -725,7 +725,7 @@
     font-size: clamp(0.1rem, 1vw, 1rem);
     padding: clamp(0.2rem, 1vw, 0.4rem);
     box-sizing: border-box;
-    border: 1px solid #000000;
+    border: clamp(0.1rem, 0.5vw, 0.4rem)  solid #000000;
     text-align: center;
   }
 }

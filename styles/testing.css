@@ -1,0 +1,695 @@
+.indexContainer {
+  font-family: "Finger Paint";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main Content Section */
+
+.indexMainContent {
+  display: flex;
+  width: 80vw;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2rem, 3vw, 10rem);
+}
+
+.leftSection {
+  flex: 1;
+}
+
+.chartImage {
+  width: auto;
+  border-radius: clamp(5px, 2vw, 10px);
+  max-width: 50vw;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.rightSection {
+  flex: 1;
+  max-width: 31.2vw;
+  padding: clamp(2rem, 2vw, 10rem);
+  border-radius: clamp(5px, 1vw, 10px);
+  background-color: #0a369c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+  
+.rightSection h2 {
+  font-size: clamp(14px, 2vw, 20rem);
+  margin-bottom: clamp(10px, 1.5vw, 20rem); /* padding */
+  color: #eeeeeeff;
+  text-shadow:
+  -2px -2px 0 #000,
+   2px -2px 0 #000,
+  -2px  2px 0 #000,
+   2px  2px 0 #000,
+  -2px  0px 0 #000,
+   2px  0px 0 #000,
+   0px  2px 0 #000,
+   0px -2px 0 #000;
+}
+ 
+.rightSection p {
+  font-size: clamp(9px, 1.2vw, 20rem);
+  margin-bottom: clamp(15px, 2vw, 10rem); /* padding */
+  color:#eeeeeeff;
+  font-family: "Comic Neue";
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  text-align: center;
+}
+  
+.exploreButton {
+  background-color: #ff6600;
+  color:#eeeeeeff;
+  padding: clamp(7px, 1vw, 10rem) clamp(1rem, 2vw, 5rem);
+  border-radius: clamp(1rem, .5vw, 5rem);
+  font-size: clamp(9px, 1.5vw, 15rem);
+  font-family: "Finger Paint";
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+  
+.exploreButton:hover {
+  background-color:#FF5F05;
+}
+
+
+/* Carousel Section */
+
+.carouselSection {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  max-width: 89vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carouselSection h2{
+  color: #0a369c;
+  text-shadow:
+    -1px -1px 0 #f1750c,
+    1px -1px 0 #f1750c,
+    -1px 1px 0 #f1750c,
+    1px 1px 0 #f1750c;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+
+.carouselTrack {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  justify-content: flex-start;
+  gap: clamp(15px, 3vw, 25px);
+  align-items: center;
+    overflow-y: hidden;
+
+
+  -webkit-scrollbar {
+    height: 8px;
+  }
+
+  -webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  -webkit-scrollbar-thumb {
+    background: #FF5F05;
+    border-radius: 10px;
+  }
+
+  -webkit-scrollbar-thumb:hover {
+    background: #e54d00;
+  }
+
+  scrollbar-width: thin;
+  scrollbar-color: #FF5F05 #f1f1f1;
+}
+
+.cells {
+  flex: 0 0 calc(33.33% - 20px);
+  width: 100%;
+  aspect-ratio: 1 / 1; 
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  border-radius: clamp(5px, 1vw, 10px);
+  scroll-snap-align: center;
+}
+  
+.cells img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: clamp(5px, 1vw, 10px);
+  box-shadow: 0 0.37vh 0.55vh rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+  
+.cells::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: clamp(5px, 1vw, 10px);
+  opacity: 1;
+  z-index: 5;
+}
+
+.hoverText {
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #eeeeeeff;
+  opacity: 1;
+  z-index: 6;
+}
+
+.hoverText p {
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-family: "Finger Paint";
+  text-align: center;
+}
+
+
+@media (max-width: 670px) and (max-height: 380px) {
+
+  .carouselSection {
+    width: 100%;
+    max-width: 96vw;
+    padding: 0 10px;
+  }
+}
+
+/* Meet the Team Section */
+
+.meetTheTeamSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meetTheTeamSection h2{
+  color: #0a369c;
+  text-shadow:
+    -1px -1px 0 #f1750c,
+    1px -1px 0 #f1750c,
+    -1px 1px 0 #f1750c,
+    1px 1px 0 #f1750c;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.teamCarousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: 90vw;
+  justify-content: flex-start;
+  gap: clamp(15px, 3vw, 25px);
+  align-items: center;
+  
+
+  -webkit-scrollbar {
+    height: 8px;
+  }
+  
+  -webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  -webkit-scrollbar-thumb {
+    background: #0a369c;
+    border-radius: 10px;
+  }
+  
+  -webkit-scrollbar-thumb:hover {
+    background: #082a73;
+  }
+  
+  /* Firefox scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #0a369c #f1f1f1;
+}
+
+.teamCells {
+  flex: 0 0 calc(33.33%);
+  min-width: 220px;
+  max-width: 390px;
+  height: 670px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  border-radius: clamp(5px, 1vw, 10px);
+  scroll-snap-align: center;
+  background-color: #fff;
+}
+
+.teamCells:hover .Headshot {
+  filter: none;
+}
+
+.headshotWrapper {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.Headshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-top-left-radius: clamp(5px, 1vw, 10px);
+  border-top-right-radius: clamp(5px, 1vw, 10px);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  min-height: 50px;
+  max-height: 50px;
+  flex-shrink: 0;
+  font-size: clamp(14px, 2.2vw, 18px);
+  font-family: "Finger Paint";
+  color: #eeeeeeff;
+  pointer-events: auto;
+  background: #FF5F05;
+  border-radius: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+.position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 120px;
+  min-height: 80px;
+  max-height: 120px;
+  flex-shrink: 0;
+  font-family: "Comic Neue";
+  background: #0a369c;
+  padding: clamp(1.2rem, 3vw, 1.8rem) clamp(0.5rem, 1.5vw, 1rem);
+  border-bottom-left-radius: clamp(5px, 1vw, 10px);
+  border-bottom-right-radius: clamp(5px, 1vw, 10px);
+  color: #eeeeeeff;
+  font-size: clamp(8px, 1.2vw, 14px);
+  text-align: center;
+  box-sizing: border-box;
+  word-break: break-word;
+  line-height: 1.2;
+  overflow: hidden;
+  z-index: 3;
+}
+
+@media (max-width: 1300px) {
+
+  .teamCells {
+    flex: 0 0 calc(33.33%);
+    min-width: 220px;
+    max-width: 390px;
+    height: 670px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    border-radius: clamp(5px, 1vw, 10px);
+    scroll-snap-align: center;
+    background-color: #fff;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .teamCarousel {
+    width: 90vw;
+  }
+
+  .teamCells {
+    flex: 0 0 calc(50%);
+    min-width: 220px;
+    max-width: 440px;
+    height: 670px;
+  }
+
+}
+
+@media (max-width: 825px) {
+
+  .teamCarousel {
+    width: 90vw;
+  }
+
+  .teamCells {
+    flex: 0 0 calc(50%);
+    min-width: 350px;
+    max-width: 350px;
+    height: 670px;
+  }
+
+  .position {
+    font-size: clamp(8px, 1.8vw, 20px);
+  }
+
+  .name {
+    font-size: clamp(14px, 3vw, 25px);
+  }
+}
+
+@media (max-width: 1180px) and (min-width: 1035px) {
+
+  .teamCarousel {
+    width: 90vw;
+  }
+
+  .teamCells {
+    flex: 0 0 calc(33.3%);
+    max-width: 330px;
+    height: auto;
+  }
+
+  .carouselSection {
+    width: 100%;
+    max-width: 75vw;
+  }
+}
+
+@media (max-width: 1134px) and (min-width: 956px) {
+    .teamCarousel {
+    width: 94vw;
+  }
+}
+
+@media (max-width: 956px) and (min-width: 874px) {
+
+  .teamCarousel {
+    width: 68vw;
+  }
+
+  .headshotWrapper {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Headshot {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .teamCells {
+    flex: 0 0 calc(50%);
+    min-width: 200px;
+    max-width: 300px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+    flex-shrink: 0;
+    font-size: clamp(12px, 2.5vw, 16px);
+    font-family: "Finger Paint";
+    color: #eeeeeeff;
+    background: #FF5F05;
+    border-radius: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    z-index: 3;
+    box-sizing: border-box;
+  }
+
+  .position {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    min-height: 80px;
+    max-height: 120px;
+    flex-shrink: 0;
+    font-family: "Comic Neue";
+    background: #0a369c;
+    padding: clamp(0.5rem, 1.5vw, 1rem) clamp(0.3rem, 1vw, 0.8rem);
+    border-bottom-left-radius: clamp(5px, 1vw, 10px);
+    border-bottom-right-radius: clamp(5px, 1vw, 10px);
+    color: #eeeeeeff;
+    font-size: clamp(8px, 1.5vw, 14px);
+    text-align: center;
+    box-sizing: border-box;
+    word-break: break-word;
+    line-height: 1.2;
+    overflow: hidden;
+    z-index: 3;
+  }
+}
+
+@media (max-width: 874px) and (min-width: 744px) {
+  .teamCarousel {
+    width: 45vw;
+  }
+}
+
+@media (max-width: 744px) and (min-width: 600px) {
+
+  .teamCarousel {
+    width: 55vw;
+  }
+
+  .teamCells {
+    flex: 0 0 100%;
+    min-width: 220px;
+    max-width: 390px;
+    height: 670px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    border-radius: clamp(5px, 1vw, 10px);
+    scroll-snap-align: center;
+    background-color: #fff;
+  }
+}
+
+@media (max-width: 670px) and (max-height: 380px) {
+  
+  .meetTheTeamSection h2 {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    margin-bottom: 10px;
+  }
+
+  .teamCarousel {
+    width: 95vw;
+    gap: clamp(8px, 2vw, 15px);
+  }
+
+  .teamCells {
+    flex: 0 0 calc(50% - 10px);
+    min-width: 140px;
+    max-width: 200px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .headshotWrapper {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Headshot {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    min-height: 30px;
+    max-height: 30px;
+    flex-shrink: 0;
+    font-size: clamp(8px, 2vw, 12px);
+    font-family: "Finger Paint";
+    color: #eeeeeeff;
+    background: #FF5F05;
+    border-radius: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    z-index: 3;
+    box-sizing: border-box;
+  }
+
+  .position {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    min-height: 50px;
+    max-height: 70px;
+    flex-shrink: 0;
+    font-family: "Comic Neue";
+    background: #0a369c;
+    padding: clamp(0.2rem, 1vw, 0.5rem) clamp(0.2rem, 0.5vw, 0.4rem);
+    border-bottom-left-radius: clamp(3px, 0.5vw, 6px);
+    border-bottom-right-radius: clamp(3px, 0.5vw, 6px);
+    color: #eeeeeeff;
+    font-size: clamp(6px, 1.2vw, 10px);
+    text-align: center;
+    box-sizing: border-box;
+    word-break: break-word;
+    line-height: 1.1;
+    overflow: hidden;
+    z-index: 3;
+  }
+}
+
+/* Illinois Banner Section */
+
+.illinoisBannerSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.orangeRectangle {
+  background-color: #FF5F05;
+  width: 80%;
+  height: clamp(20vh, 25vw, 30vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: clamp(6px, 1.5vw, 12px);
+  position: relative;
+  b\ox-shadow: 0 0.37vh 0.74vh rgba(0, 0, 0, 0.2);
+}
+  
+.illinoisBannerImage {
+  max-height: 90%;
+  max-width: 95%;
+  object-fit: contain;
+}
+
+/* Questions Section */
+
+.questionsSection {
+  text-align: center;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background-color: #eeeeeeff;
+  border-radius: clamp(6px, 1vw, 12px);
+  box-shadow: 0 0.37vh 0.74vh rgba(0, 0, 0, 0.1);
+  max-width: 80vw;
+}
+  
+.questionsSection h2 {
+  font-size: clamp(20px, 3vw, 32px);
+  color: #0a369c;
+  margin-bottom: 1.5rem;
+}
+
+.questionsSection p {
+  font-family: "Comic Neue";
+  font-size: clamp(14px, 2.5vw, 22px);
+  color: #0a369c;
+  margin: 0.7rem 0;
+  line-height: 1.4;
+}
+
+.questionsSection a {
+  color: #ff6600;
+  text-decoration: none;
+}
+  
+.questionsSection a:hover {
+  text-decoration: underline;
+}
+
+

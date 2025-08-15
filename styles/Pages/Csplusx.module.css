@@ -1,0 +1,538 @@
+.indexContainer {
+  margin-top: 50px;
+  margin-left: clamp(1rem, 5vw, 5rem);
+  margin-right: clamp(1rem, 5vw, 5rem);
+  font-family: "Finger Paint";
+  display: flex;
+  flex-direction: column;
+}
+
+/* First Part */
+
+.imageWrapper {
+  position: relative;
+  width: 80vw;
+  max-width: 2000px;
+  aspect-ratio: 16 / 9;
+  min-height: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 5px solid #000;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.semiTransparentBlock {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bannerImage {
+  width: 90%;
+  height: auto;
+  max-width: 2000px;
+  display: block;
+  margin: 0 auto;
+  z-index: 3;
+}
+
+.firstImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.scrollContainer {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.scrollTextLeft,
+.scrollTextRight {
+  position: absolute;
+  top: 0;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: bold;
+  opacity: 0;
+  white-space: nowrap;
+}
+
+.scrollTextLeft {
+  left: 0;
+  color: #FF5F05;
+  animation: fadeInRight 1.5s forwards ease-in-out;
+}
+
+.scrollTextRight {
+  right: 0;
+  color: #0a369c;
+  animation: fadeInLeft 1.5s forwards ease-in-out;
+}
+
+.arrowContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.longArrow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: transparent;
+  z-index: 1;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+  display: block;
+  pointer-events: none;
+}
+
+.arrowVisible {
+  opacity: 4;
+}
+
+/* Keyframes for Fade In */
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* What is CS + X Section*/
+
+.fullBlue1Background {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 0rem 0;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.Blue1Content {
+  color: #0a369c;
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.bigBlueText {
+  text-shadow: 0 2px 8px rgba(255, 152, 0, 0.15);
+  font-family: "Finger Paint";
+  font-size: clamp(2rem, 5vw, 20rem);
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 8px rgba(10, 54, 156, 0.15);
+  max-width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #0a369c;
+}
+
+.headingText {
+  font-family: "Finger Paint";
+  font-size: clamp(1.2rem, 3vw, 10rem);
+  font-weight: 700;
+  color: #081c5a;
+  text-align: center;
+  margin: 2rem auto;
+  letter-spacing: 0.05em;
+  max-width: 1500px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.orangeList {
+  font-family: "Comic Neue";
+  font-size: clamp(0.9rem, 1.4vw, 5em);
+  line-height: 1.7;
+  margin: 0 auto;
+  max-width: 2000px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem 6rem;
+  list-style: none;
+  text-align: center;
+  display: block;
+}
+
+.orangeList li {
+  margin-bottom: 0.85rem;
+}
+
+@media (max-width: 500px) {
+  .bigBlueText {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+  .headingText {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+  }
+  .orangeList {
+    font-size: clamp(1rem, 2.5vw, 1.8rem);
+  }
+}
+
+@media (max-width: 1400px) {
+  .orangeList {
+    font-family: "Comic Neue";
+    font-size: clamp(0.9rem, 2vw, 1.8rem);
+  }
+
+  .Blue1Content {
+    padding: clamp(1rem, 3vw, 1.5rem) clamp(0.5rem, 2vw, 1rem);
+  }
+}
+
+/* What we will be doing section */
+
+.fullOrangeBackground {
+  width: 100vw;
+  min-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 5rem 0;
+  text-align: center;
+  background: #FF5F05;
+}
+
+.orangeContent {
+  max-width: 100vw;
+  margin: 0 auto;
+  color: #eeeeeeff;
+  padding: 2.5rem 2rem 2.5rem 2.5rem;
+}
+
+.orangeHeading {
+  text-shadow: 0 2px 8px rgba(255, 152, 0, 0.15);
+  font-family: "Finger Paint";
+  font-size: clamp(2rem, 5vw, 6rem);
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 8px rgba(10, 54, 156, 0.15);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 500px) {
+  .orangeHeading {
+    font-size: clamp(2rem, 5vw, 4rem);
+  }
+  .orangeContent {
+    padding: clamp(1rem, 3vw, 1.5rem) clamp(0.5rem, 2vw, 1rem);
+  }
+}
+
+/* Look at our google slides section */
+
+.fullBlueBackground {
+  width: 100vw;
+  min-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background:#0a369c;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.BlueContent {
+  max-width: 100vw;
+  color: #eeeeeeff;
+  padding: 2.5rem 2rem 2.5rem 2.5rem;
+}
+
+.BlueHeading {
+  padding-bottom: 1rem;
+  color: #FF5F05;
+  text-shadow: 0 2px 8px rgba(255, 152, 0, 0.15);
+  font-family: "Finger Paint";
+  font-size: clamp(2rem, 5vw, 6rem);
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 8px rgba(10, 54, 156, 0.15);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.googleSlidesIframe {
+  width: 80%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  margin: clamp(2rem, 5vw, 4rem) auto;
+  display: block;
+  touch-action: pan-y;
+}
+
+.googleSlidesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* explore more section */
+
+.fulltanBackground {
+  width: 100vw;
+  min-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 5rem 0rem;
+  text-align: center;
+  background: #eeeeeeff;
+}
+
+.tanContent {
+  color: #0a369c;
+  padding: clamp(1.5rem, 5vw, 2.5rem) clamp(1rem, 4vw, 2rem);
+}
+
+.carouselHeading {
+  padding-bottom: .5em;
+  padding-top: 0em;
+  text-shadow: 0 2px 8px rgba(255, 152, 0, 0.15);
+  font-family: "Finger Paint";
+  font-size: clamp(2rem, 5vw, 6rem);
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 8px rgba(10, 54, 156, 0.15);
+  max-width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #0a369c;
+}
+
+.videoList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.videoListCell {
+  background: #eeeeeeff;
+  border-radius: clamp(0.5rem, 2vw, 1rem);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding-bottom: clamp(1rem, 3vw, 2rem);
+  display: flex;
+  padding-top: clamp(1rem, 3vw, 2rem);
+  flex-direction: column;
+  align-items: center;
+}
+
+.videoWrapper {
+  border: 2px solid #081c5a;
+  width: 90%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  margin-bottom: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoWrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.carouselDesc {
+  font-size: clamp(0.9rem, 2.2vw, 5rem);
+  color: #222;
+  margin: 0;
+  text-align: center;
+  padding: 2rem 1rem;
+  width: 80%;
+  height: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carouselDesc p {
+  padding-top: 2rem;
+  font-size: clamp(0.9rem, 2.3vw, 3rem);
+  text-align: center;
+  font-family: "Comic Neue";
+}
+
+/* links for learning section */
+
+.OrangeBackground {
+  width: 100vw;
+  min-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background: #FF5F05;
+  padding: clamp(2rem, 8vw, 4rem) 0;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.orange2Content {
+  max-width: 90vw;
+  margin: 0 auto;
+  color: #eeeeeeff;
+  padding: clamp(1.5rem, 5vw, 2.5rem) clamp(1rem, 4vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.orange2Heading {
+  padding-bottom: 3rem;
+  font-family: "Finger Paint";
+  font-size: clamp(2rem, 5vw, 6rem);
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 8px rgba(10, 54, 156, 0.15);
+  max-width: 1000px;
+}
+
+.endList {
+  font-family: "Comic Neue";
+  font-size: clamp(0.9rem, 4vw, 3rem);
+  line-height: 1.7;
+  list-style: disc outside;
+  margin: 0 auto;
+  padding-left: 2rem;
+  display: block;
+  text-align: left;
+  max-width: max-content;
+}
+
+.endlist li{
+  margin-bottom: 0.75;
+}
+
+@media (max-width: 500px) {
+  .orange2Heading {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  .orange2Content {
+    padding: 1rem 0.5rem;
+  }
+  .endList {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+  }
+}
+
+@media (max-width: 440px) {
+  /* Banner and scroll text */
+  .scrollTextLeft,
+  .scrollTextRight {
+    font-size: 0.9rem;
+  }
+
+  /* Main headings - largest text */
+  .bigBlueText,
+  .orangeHeading,
+  .BlueHeading,
+  .carouselHeading,
+  .orange2Heading {
+    font-size: 1.8rem;
+  }
+
+  /* Secondary headings */
+  .headingText {
+    font-size: 1.2rem;
+  }
+
+  /* Body text - lists */
+  .orangeList {
+    font-size: 0.9rem;
+  }
+
+  .endList {
+    font-size: 1rem;
+  }
+
+  /* Video carousel descriptions */
+  .carouselDesc {
+    font-size: 0.8rem;
+  }
+
+  .carouselDesc p {
+    font-size: 0.9rem;
+    padding-top: 1rem;
+  }
+
+  /* Content containers padding */
+  .Blue1Content,
+  .orangeContent,
+  .BlueContent,
+  .tanContent,
+  .orange2Content {
+    padding: 1rem 0.5rem;
+  }
+
+  /* Video wrapper height adjustment */
+  .videoWrapper {
+    height: 250px;
+  }
+}

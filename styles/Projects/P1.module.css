@@ -1,0 +1,375 @@
+.indexContainer {
+  font-family: "Finger Paint";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 700;
+  color: #47accb;
+  margin-top: 32px;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+  text-shadow: 1px 2px 8px #000000;
+}
+
+/* Movie Time */
+
+.audienceSection {
+  position: relative;
+  width: 80vw;
+  max-width: 1200px;
+  aspect-ratio: 4/3;
+  background: url('/audience.jpg') center/cover no-repeat;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border: 5px solid #000;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.foeCircle {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: clamp(0.2rem, 0.5vw, 0.4rem) solid #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  z-index: 2;
+}
+
+.linguisticsItem {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  width: 40%;
+  max-width: 40%;
+  height: auto;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  z-index: 2;
+}
+
+.audienceText {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  font-family: "Finger Paint";
+  font-size: clamp(0.3rem, 3.3vw, 4rem);
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  letter-spacing: 1px;
+  z-index: 3;
+  text-align: left;
+  max-width: 60vw;
+  box-sizing: border-box;
+  padding: 0.5em 1vw;
+  word-break: break-word;
+  background: transparent;
+}
+
+/* Foellinger Time */
+
+.carouselSection {
+  
+  position: relative;
+  width: 80vw;
+  max-width: 2000px;
+  aspect-ratio: 16 / 10;
+  background: url('/Foe.png') center center no-repeat;
+  background-size: cover;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border: clamp(0.1rem, 0.5vw, 0.4rem) solid #000;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  /* easy tuning knobs for screen placement in the image */
+  --screen-top: 0vh;                   /* top edge of the cinema screen in the image */
+  --screen-width: 100%;                 /* width of the cinema screen in the image */
+  --screen-ratio: calc(16 / 7);        /* aspect ratio of the cinema screen in the image */
+}
+
+.carouselOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselVideoWrapper {
+  border: clamp(0.1rem, 0.5vw, 0.4rem) solid #ffffff;
+  position: absolute;
+  left: 50%;
+  top: var(--screen-top);
+  width: var(--screen-width);
+  height: var(--screen-height);
+  aspect-ratio: var(--screen-ratio);
+  background: #ebdddd;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+}
+
+.carouselVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.carouselArrowRow {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 10rem);
+  width: 100%;
+  pointer-events: none;
+}
+
+.carouselArrow {
+  position: static;
+  width: 6vw;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  pointer-events: auto;
+}
+
+.carouselArrow:hover {
+  background: #FF5F05;
+  color: #fff;
+}
+
+.arrowSymbol {
+  font-size: calc(6vw * 0.8);
+  line-height: 1;
+  color: #fff;
+  pointer-events: none;
+}
+
+/* Orange FlashcardSection */
+
+.containerOrange {
+  background: #FF5F05;
+}
+
+.cardImage {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  z-index: 2;
+  width: 75%;
+  height: 55%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  background: white;
+}
+
+/* Blue Flashcard Section */
+
+.containerBlue {
+  background: #0a369c;
+}
+
+.whiteBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(5vw, 80%, 50vw);
+  height: clamp(5vh, 60%,50vh);
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 24px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.structure {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: clamp(1rem, 2.5vw, 3rem);
+  font-weight: 600;
+  color: #000000;
+  z-index: 2;
+  margin-bottom: 0;
+}
+
+.example {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: clamp(0.8rem, 2vw, 2.5rem);
+  color: #000000;
+  font-style: italic;
+  z-index: 2;
+}
+
+.title2 {
+  position: absolute;
+  font-size: clamp(0.5rem, 4.5vw, 6rem);
+  font-weight: 700;
+  padding-bottom: 2%;
+  color: #ffffff;
+  z-index: 2;
+  letter-spacing: 1px;
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px  2px 0 #000,
+    2px  2px 0 #000,
+    0px  2px 8px rgba(255,145,0,0.08);
+  margin-left: clamp(1rem, 10vw, 10rem);
+  text-align: left;
+  top: 5%;
+  width: 100%;
+}
+
+/* Both Flashcard Sections */
+
+.containerOrange,
+.containerBlue {
+  width: 80vw;
+  max-width: 2000px;
+  aspect-ratio: 4/5;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border: 5px solid #000;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.centerContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.title {
+  position: absolute;
+  font-size: clamp(2rem, 6vw, 8rem);
+  font-weight: 700;
+  padding-bottom: 2%;
+  color: #ffffff;
+  z-index: 2;
+  letter-spacing: 1px;
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px  2px 0 #000,
+    2px  2px 0 #000,
+    0px  2px 8px rgba(255,145,0,0.08);
+  margin-left: clamp(1rem, 10vw, 10rem);
+  text-align: left;
+  top: 5%;
+  width: 100%;
+}
+
+.flashcardContainer {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flashcard {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.arrowRow {
+  position: absolute;
+  top: 25%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  gap: clamp(1rem, 5vw, 10rem);
+}
+
+.arrow,
+.arrowBack {
+  position: static;
+  width: clamp(1rem, 10vw, 15rem);
+  height: auto;
+  transform: rotate(90deg);
+}
+
+.arrowBack {
+  transform: rotate(-90deg);
+}
+
+@media (min-width: 500px) {
+
+  .arrowRow {
+    position: absolute;
+    top: 29%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    z-index: 10;
+
+  }
+
+  .arrow,
+  .arrowBack {
+    width: clamp(1rem, 6vw, 30rem);
+    height: auto;
+  }
+
+  .containerOrange,
+  .containerBlue {
+    aspect-ratio: 4/2.5;
+  }
+
+  .whiteBox {
+    width: clamp(5vw, 75%, 50vw);
+    height: clamp(5vh, 55%, 50vh);
+  }
+
+  .flashcardContainer {
+    width: 70%;
+    height: 70%;
+  }
+}
+

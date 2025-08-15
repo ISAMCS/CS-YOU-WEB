@@ -1,0 +1,820 @@
+.indexContainer {
+  font-family: "Finger Paint";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* First Part */
+
+.imageWrapper {
+  position: relative;
+  width: 80vw;
+  max-width: 2000px;
+  aspect-ratio: 16 / 9;
+  min-height: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: clamp(0.1rem, 0.5vw, 0.4rem) solid #000;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.bannerImage {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  z-index: 4;
+}
+
+.firstImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.scrollContainer {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.scrollTextLeft,
+.scrollTextRight {
+  position: absolute;
+  top: 0;
+  font-size: clamp(1rem, 2.5vw, 10rem);
+  font-weight: bold;
+  opacity: 0;
+  white-space: nowrap;
+}
+
+.scrollTextLeft {
+  left: 0;
+  color: #FF5F05;
+  animation: fadeInRight 1.5s forwards ease-in-out;
+}
+
+.scrollTextRight {
+  right: 0;
+  color: #0a369c;
+  animation: fadeInLeft 1.5s forwards ease-in-out;
+}
+
+.arrowContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.longArrow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: transparent;
+  z-index: 1;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+  display: block;
+  pointer-events: none;
+}
+
+.arrowVisible {
+  opacity: 1;
+}
+
+/* Keyframes for Fade In */
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Learning Section*/
+
+.learningSection3 {
+  position: relative;
+  width: 80vw;
+  max-width: 2000px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: clamp(1rem, 8vw, 15rem) 0 clamp(1rem, 8vw, 15rem) 0;
+  gap: 32px;
+  border: clamp(0.1rem, 0.5vw, 0.4rem) solid #000;
+  background-image: url("/crop-background.png");
+  background-size: cover;
+}
+
+.whiteBackground{
+  padding-top: clamp(1rem, 3vw, 10rem);
+  padding-bottom: clamp(1rem, 3vw, 10rem);
+  padding-right: clamp(1rem, 5vw, 10rem);
+  padding-left: clamp(1rem, 5vw, 10rem);
+  width: 85%;
+  height: 80%;
+  background-color: #fff;
+  border: clamp(0.1rem, 0.5vw, 0.4rem) solid #000;
+}
+
+.bigBlueText {
+  font-family: "Finger Paint";
+  font-size: clamp(2rem, 3vw, 6rem);
+  font-weight: bold;
+  padding: clamp(1rem, 2rem, 5rem) clamp(0.5rem, 1vh, 5rem);
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #0a369c;
+  text-shadow: 0 2px 8px rgba(10, 54, 156, 0.15);
+  width: 100%;
+}
+
+.headingText {
+  font-family: "Finger Paint";
+  font-size: clamp(1.2rem, 2vw, 3rem);
+  font-weight: 700;
+  color: #e7500f;
+  text-align: center;
+  letter-spacing: 0.05em;
+  max-width: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.objectivesList {
+  font-family: "Comic Neue";
+  font-size: clamp(0.9rem, 1.4vw, 3rem);
+  line-height: 1.7;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  width: fit-content;
+  box-sizing: border-box;
+  padding: clamp(1rem, 2rem, 5rem) clamp(2rem, 3vw, 5rem);
+  list-style: disc outside;
+  text-align: left;
+  display: block;
+}
+
+.objectivesList li {
+  margin-bottom: 0.85rem;
+}
+
+/* Movie Time */
+
+.audienceSection {
+  position: relative;
+  width: 80vw;
+  max-width: 2000px;
+  aspect-ratio: 4/3;
+  background: url('/audience.jpg') center/cover no-repeat;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border: 5px solid #000;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.foeCircle {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: clamp(0.2rem, 0.5vw, 0.4rem) solid #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  z-index: 2;
+}
+
+.linguisticsItem {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  width: 40%;
+  max-width: 40%;
+  height: auto;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  z-index: 2;
+}
+
+.audienceText {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  font-family: "Finger Paint";
+  font-size: clamp(0.3rem, 3.3vw, 10rem);
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  letter-spacing: 1px;
+  z-index: 3;
+  text-align: left;
+  max-width: 60vw;
+  box-sizing: border-box;
+  padding: 0.5em 1vw;
+  word-break: break-word;
+  background: transparent;
+}
+
+/* Foellinger Time */
+
+.carouselSection {
+  
+  position: relative;
+  width: 80vw;
+  max-width: 2000px;
+  aspect-ratio: 16 / 10;
+  background: url('/Foe.png') center center no-repeat;
+  background-size: cover;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border: clamp(0.1rem, 0.5vw, 0.4rem) solid #000;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  /* easy tuning knobs for screen placement in the image */
+  --screen-top: 0vh;                   /* top edge of the cinema screen in the image */
+  --screen-width: 100%;                 /* width of the cinema screen in the image */
+  --screen-ratio: calc(16 / 7);        /* aspect ratio of the cinema screen in the image */
+}
+
+.carouselOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselVideoWrapper {
+  border: clamp(0.1rem, 0.5vw, 0.4rem) solid #ffffff;
+  position: absolute;
+  left: 50%;
+  top: var(--screen-top);
+  width: var(--screen-width);
+  height: var(--screen-height);
+  aspect-ratio: var(--screen-ratio);
+  background: #ebdddd;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+}
+
+.carouselVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.carouselArrowRow {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 10rem);
+  width: 100%;
+  pointer-events: none;
+}
+
+.carouselArrow {
+  position: static;
+  width: 6vw;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  pointer-events: auto;
+}
+
+.carouselArrow:hover {
+  background: #FF5F05;
+  color: #fff;
+}
+
+.arrowSymbol {
+  font-size: calc(6vw * 0.8);
+  line-height: 1;
+  color: #fff;
+  pointer-events: none;
+}
+
+/* Dinner Talks */
+
+.dinnerSection {
+  position: relative;
+  width: 80vw;
+  max-width: 2000px;
+  background: url('/stage.jpg') center/cover no-repeat;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border: 5px solid #000;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: clamp(1rem, 5vw, 10rem);
+  padding-bottom: clamp(1rem, 5vw, 10rem);
+}
+
+.dinnerHeaderImage {
+  width: 90%;
+  max-width: 1000px;
+  height: auto;
+  margin-bottom: clamp(1rem, 5vw, 5rem);
+  position: static;
+  z-index: 2;
+}
+
+.dinnerGrid {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2vw;
+}
+
+.dinnerRow {
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 1.5%;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: clamp(1rem, 2vw, 2rem);
+  border: 5px solid #000;
+  box-sizing: border-box;
+}
+
+.dinnerImageCol {
+  flex: 0 0 30%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.dinnerImage {
+  width: 50%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+
+.dinnerTitle {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 1.5vw, 10rem);
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 0.2rem 0.2rem;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  overflow: hidden;
+}
+
+.dinnerTextCol {
+  flex: 1;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dinnerText {
+  font-size: clamp(0.9rem, 1.4vw, 3rem);
+  color: #222;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+ .dinnerBulletList {
+  padding-top: 2rem;
+  margin: 0 0 clamp(1rem,2vw,1.5rem) 0;
+  padding-left: 1.5em;
+  list-style-type: disc;
+  color: #2d3a4a;
+  font-size: clamp(0.9rem, 1.4vw, 3rem);
+  line-height: 1.6;
+  font-family: "Comic Neue";
+  text-align: left;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.dinnerBulletList li {
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  .dinnerRow {
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+
+  .dinnerImageCol {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .dinnerTextCol {
+    width: 100%;
+    padding-left: .2rem;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1200px) {
+  .dinnerImageCol {
+    flex: 0 0 35%;
+    width: 35%;
+  }
+
+  .dinnerTextCol {
+    width: 65%;
+  }
+}
+
+/* Let's learn section */
+
+.learningSection {
+  position: relative;
+  width: 80vw;
+  max-width: 2000px;
+  aspect-ratio: 4/2;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border: clamp(0.1rem, 0.5vw, 0.4rem) solid #000;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.learningSection::after {
+  content: "";
+  position: absolute;
+  top: 0;  
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #FF5F05;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  z-index: 1;
+}
+
+.learningText {
+  position: absolute;
+  top: clamp(10vmin, 10vmin, 35vmin);
+  right: clamp(10vmin, 10vmin, 25vmin);
+  transform: rotate(30deg);
+  font-family: 'Finger Paint';
+  font-size: clamp(1rem, 4vw, 8rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+     0px  2px 8px rgba(255,145,0,0.08);
+  z-index: 3;
+  line-height: 1.2;
+  text-align: center;
+  width: 30%;
+  white-space: pre-line;
+}
+
+.learningImage {
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  width: 45%;
+  height: auto;
+  z-index: 2;
+  transform: scaleX(-1);
+}
+
+/* Learning Section */
+
+.learningSection2 {
+  position: relative;
+  width: 80vw;
+  max-width: 2000px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+.practiceText {
+  position: static;
+  font-size: clamp(1.5rem, 4vw, 8rem);
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  color: #2d3a4a;
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+.instructionText {
+  padding-top: clamp(1rem, 3vw, 10rem);
+  position: static;
+  font-size: clamp(0.8rem, 1.5vw, 3rem);
+  color: #66696e;
+  text-align: center;
+  max-width: 2000px;
+  width: 75%;
+  align-self: center;
+}
+
+.learningCardColumn {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  width: 100%;
+}
+
+.learningCard {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 2000px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.learningLeftPanel {
+  position: static;
+  flex: 1;
+  padding: clamp(32px, 5vw, 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.learningTitle {
+  position: static;
+  font-size: clamp(1.2rem, 2vw, 3rem);
+  font-weight: 700;
+  margin-bottom: clamp(12px, 2vw, 18px);
+  color: #2d3a4a;
+}
+
+.buttonRow {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 18px;
+  align-items: stretch;
+}
+
+.learningCTA,
+.learningCTAAlt {
+  background: #2ec4b6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: clamp(0.8rem, 1vw, 3rem);
+  font-weight: 600;
+  margin-bottom: 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  display: block;
+}
+
+.learningCTAAlt:hover,
+.learningCTA:hover {
+  background: #1fa89a;
+}
+
+.learningUnderline {
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
+  margin: 0 0 clamp(12px, 2vw, 18px) 0;
+  width: 100%;
+}
+
+.learningDescription {
+  font-family: "Comic Neue";
+  font-size: clamp(0.9rem, 1.4vw, 3rem);
+  color: #4a5568;
+  margin-bottom: clamp(12px, 2vw, 18px);
+  text-indent: 0;
+  padding-left: 0.5em;
+  text-align: left;
+  display: block;
+  white-space: pre-line;
+}
+
+.learningList {
+  font-family: "Comic Neue";
+  list-style: disc inside;
+  color: #2d3a4a;
+  font-size: clamp(0.9rem, 1.4vw, 3rem);
+  padding-left: 1.5em;
+}
+
+.learningList li {
+  text-indent: -1em;
+  padding-left: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.learningDivider {
+  width: 2px;
+  background: #e0e0e0;
+}
+
+.learningRightPanel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #faf5e6;
+}
+
+.learningRightBG {
+  width: 100%;
+  height: clamp(13rem, 30vh, 40rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.learningProjectImage {
+  width: clamp(10rem, 15vw, 40rem);
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.frankJapanCircle{
+  width: clamp(10rem, 15vw, 40rem);
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+@media (max-width: 700px) {
+.learningCard {
+    flex-direction: column;
+  }
+}
+
+/* Footer */
+.footer {
+
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.footerContent {
+  font-family: "League Spartan", cursive;
+  font-size: clamp(0.5rem, 2vw,5rem);
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  letter-spacing: 0.5px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: clamp(0.5rem, 2vw, 1.5rem) clamp(0.5rem, 4vw, 3rem);
+  border-radius: 12px;
+    border: clamp(0.1rem, 0.5vw, 0.4rem) solid #000;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Goose and Squirrel in Footer */
+.squirrelGooseRow {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(1rem, 5vw, 150px);
+  width: 100%;
+  max-width: 100vw;
+}
+
+.squirrelWrapper {
+  position: relative;
+  width: 30%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.gooseWrapper {
+  position: relative;
+  width: 50%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.squirrelImage,
+.gooseImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.quoteSquirrelImage {
+  position: absolute;
+  width: 90%;
+  bottom: 50%;
+  left: 70%;
+  height: auto;
+  z-index: 3;
+}
+
+.quoteGooseImage {
+  position: absolute;
+  width: 60%;
+  bottom: 10%;
+  left: 70%;
+  height: auto;
+  z-index: 3;
+}

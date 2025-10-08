@@ -159,75 +159,115 @@ export default function Home() {
 
           <div style={{ padding: "3vh" }}></div>
 
-          {/* First Part */}
-
-          <section className={styles.imageWrapper}>
-          <img src="/anthropology-banner.png" alt="anthro" className={styles.bannerImage} />
-          <img src="/CS+anthro.jpg" alt="CS + Anthro" className={styles.firstImage} />
-          <div className={styles.scrollContainer}>
-              <div className={styles.scrollTextLeft}>Scroll</div>
-              <div className={styles.scrollTextRight}>Down</div>
-          </div>
-          <div
-              className={`${styles.arrowContainer} ${
-              showArrow ? styles.arrowVisible : ''
-              }`}
-          >
-              {/* Replace Arrow component with PNG */}
-              <img
-              src="/ArrowBlue.png"
-              alt="Scroll Down Arrow"
-              className={styles.longArrow}
-              />
-          </div>
-          </section>
-
-          <div style={{ padding: "3vh" }}></div>
-
-          {/* NewsCorner Section */}
-
-          {/* What will we be Learning Section? */}
-
-          <section className={styles.learningSection3}>
-          <div className={styles.whiteBackground}>
-          <div className={styles.bigBlueText}>What will we be Learning?</div>
-          <div className={styles.headingText}> The Daily Illini's Reading Corner</div>
-          <ul className={styles.objectivesList}>
-              <li>How New Emoji Are Changing the Pictorial Language | The Atlantic </li>
-              <li>Digital Anthropology | Anthroencyclopedia</li>
-          </ul>
-          <div className={styles.headingText}> The Daily Illini's Coffee Chats</div>
-          <ul className={styles.objectivesList}>
-              <li>How New Emoji Are Changing the Pictorial Language | The Atlantic - Questions</li>
-              <li>Digital Anthropology | Anthroencyclopedia - Questions</li>
-          </ul>
-          <div className={styles.headingText}>A Show in Foellinger Auditorium!</div>
-            <ul className={styles.objectivesList}>
-              <li>The Unicode Emoji Subcommittee | The Unicode Consortium | 4:04</li>
-              <li>Why it Takes Years to Create Emoji | The Insider | 4:50</li>
-              <li>Correlation Doesn't Equal Causation | Crash Course Statistics #8 | 12:18</li>
-              <li>How P-Values Help Us Test Hypotheses | Crash Course Statistics #21 | 11:53</li>
-              <li>Introduction to Pandas Libaray in Python | Data For Dummies | 3:58</li>
-            </ul>
-          <div className={styles.headingText}>Foellinger Showings - Dinner Talks!</div>
-            <ul className={styles.objectivesList}>
-              <li>The Unicode Emoji Subcommittee | The Unicode Consortium | 4:04 - Questions</li>
-              <li>Why it Takes Years to Create Emoji | The Insider | 4:50  - Questions</li>
-              <li>Correlation Doesn't Equal Causation | Crash Course Statistics #8 | 12:18 - Questions</li>
-              <li>How P-Values Help Us Test Hypotheses | Crash Course Statistics #21 | 11:53 - Questions</li>
-              <li>Introduction to Pandas Libaray in Python | Data For Dummies | 3:58 - Questions</li>
-            </ul>
-          <div className={styles.headingText}>Practice Makes Perfect! Practice Makes Perfect!</div>
-          <ul className={styles.objectivesList}>
-              <li>Project 1: Election Results Analysis</li>
-              <li>Project 2: Major World Cities Anthropology Project</li>
-          </ul>
-          </div>
+            {/* Redesigned "What will we be Learning?" Section */}
+            <section className={styles.learningIntroSection}>
+            <div className={styles.whiteBackground}>
+              <div className={styles.bigBlueText}>What will we be Learning?</div>
+              <div className={styles.learningIntroImageWrapper}>
+                <img src="/CS+anthro.jpg" alt="Digital Anthropology" className={styles.learningIntroImage} />
+              </div>
+              <div className={styles.learningNavLinks}>
+                <a href="#news-corner" className={styles.learningNavLink}>Reading Corner</a>
+                <a href="#audience-section" className={styles.learningNavLink}>Show in Foellinger</a>
+                <a href="#practice-project-section" className={styles.learningNavLink}>Practice Project</a>
+              </div>
+              <div id="reading-corner" className={styles.learningSectionBlock}>
+                <div className={styles.headingText}>📰 Anthropology in the Digital Age</div>
+                <ul className={styles.objectivesList}>
+                  <li>
+                    <strong>How New Emoji Are Changing the Pictorial Language</strong> <br />
+                    Explore how emoji are shaping communication and language. <br />
+                    <a
+                      href="/pdfs/emoji-language.pdf"
+                      target="_blank"
+                      className={styles.learnMoreLink}
+                    >
+                      Read Article
+                    </a>
+                  </li>
+                  <li>
+                    <strong>Digital Anthropology</strong> <br />
+                    Learn about the study of humans and technology in the digital era. <br />
+                    <a
+                      href="https://www.anthroencyclopedia.com/entry/digital-anthropology"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.learnMoreLink}
+                    >
+                      Read Article
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div id="foellinger-show" className={styles.learningSectionBlock}>
+                <div className={styles.headingText}>🎬 A Show in Foellinger Auditorium!</div>
+                <ul className={styles.objectivesList}>
+                  <li>
+                    <strong>The Unicode Emoji Subcommittee</strong> <br />
+                    Discover how new emoji are proposed and approved.
+                  </li>
+                  <li>
+                    <strong>Why it Takes Years to Create Emoji</strong> <br />
+                    Learn about the process and factors in emoji creation.
+                  </li>
+                  <li>
+                    <strong>Correlation Doesn't Equal Causation</strong> <br />
+                    Understand the difference between correlation and causation in data.
+                  </li>
+                  <li>
+                    <strong>How P-Values Help Us Test Hypotheses</strong> <br />
+                    Explore statistical significance and hypothesis testing.
+                  </li>
+                  <li>
+                    <strong>Introduction to Pandas Library in Python</strong> <br />
+                    Get started with data analysis using Python's pandas library.
+                  </li>
+                </ul>
+              </div>
+              <div id="practice-project" className={styles.learningSectionBlock}>
+                <div className={styles.headingText}>🎵 Practice Makes Perfect!</div>
+                <ul className={styles.objectivesList}>
+                  <li>
+                    <strong>Project 1: Election Results Analysis</strong><br />
+                    Analyze the 2020 election results using Google Colab and data visualization.<br />
+                    <a
+                      href="https://colab.research.google.com/drive/1RjVzr2Tn6aJfIjnybX5IWui3tKDCiOuR?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.learnMoreLink}
+                    >
+                      Google Colab Module
+                    </a>
+                    {" | "}
+                    <a
+                      href="/anes.csv"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.learnMoreLink}
+                    >
+                      Download Data
+                    </a>
+                  </li>
+                  <li>
+                    <strong>Project 2: Major World Cities Anthropology Project</strong><br />
+                    Explore happiness and competitiveness in world cities using data analysis.<br />
+                    <a
+                      href="https://docs.google.com/document/d/1aa6M43PdWdnCPEttc8N9G5Y0wNGVU2-XfnHVsURnp5s/edit?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.learnMoreLink}
+                    >
+                      Google Doc Handout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </section>
 
           <div style={{ padding: "3vh" }}></div>
           
-          <section className={styles.newsCornerSection}>
+          <section id="news-corner" className={styles.newsCornerSection}>
             <img
               src="/Daily Illini.png"
               alt="Daily Illini"
@@ -260,7 +300,6 @@ export default function Home() {
           <div style={{ padding: "3vh" }}></div>
 
           {/* CoffeeChats Section */}
-
           <section className={styles.news2Section}>
             <img
               src="/coffeechats.png"
@@ -297,8 +336,7 @@ export default function Home() {
           <div style={{ padding: "3vh" }}></div>
 
           {/* Movie Time */}
-
-          <section className={styles.audienceSection}>
+          <section id="audience-section" className={styles.audienceSection}>
             <img
               src="/foecircle.png"
               alt="FOE Circle"
@@ -317,7 +355,6 @@ export default function Home() {
           <div style={{ padding: "3vh" }}></div>
 
           {/* Foellinger Time */}
-
           <section className={styles.carouselSection}>
             <div className={styles.carouselOverlay}>
               <div className={styles.carouselVideoWrapper}>
@@ -346,7 +383,6 @@ export default function Home() {
           <div style={{ padding: "3vh" }}></div>
 
           {/* Dinner Talks Section */}
-
           <section className={styles.dinnerSection}>
             <img
               src="/Dinner talks.png"
@@ -383,7 +419,6 @@ export default function Home() {
           <div style={{ padding: "3vh" }}></div>
 
           {/* Let's learn section */}
-
           <section className={styles.learningSection}>
             <div className={styles.learningText}>Let's do some learning!</div>
             <img
@@ -396,8 +431,7 @@ export default function Home() {
           <div style={{ padding: "3vh" }}></div>
 
           {/* Learning Section */}
-
-          <section className={styles.learningSection2}>
+          <section id="practice-project-section" className={styles.learningSection2}>
             <div className={styles.practiceText}>Practice Makes Perfect! <br /> Practice Makes Perfect!</div>
             <div className={styles.instructionText}>
               Please Make a Copy of each Google Colab Module and Google Doc by going to "File" and "Save a Copy in Drive"

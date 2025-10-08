@@ -204,86 +204,128 @@ export default function Phil() {
 
           <div style={{ padding: "3vh" }}></div>
 
-          {/* First Part */}
-
-          <section className={styles.imageWrapper}>
-          <img src="/philosophy-banner.png" alt="phil" className={styles.bannerImage} />
-          <img src="/CS+Philo.jpg" alt="CS + phil" className={styles.firstImage} />
-          <div className={styles.scrollContainer}>
-              <div className={styles.scrollTextLeft}>Scroll</div>
-              <div className={styles.scrollTextRight}>Down</div>
-          </div>
-          <div
-              className={`${styles.arrowContainer} ${
-              showArrow ? styles.arrowVisible : ''
-              }`}
-          >
-              {/* Replace Arrow component with PNG */}
-              <img
-              src="/ArrowBlue.png"
-              alt="Scroll Down Arrow"
-              className={styles.longArrow}
-              />
-          </div>
-          </section>
-
-          <div style={{ padding: "3vh" }}></div>
-
-          {/* What will we be Learning Section? */}
-
-          <section className={styles.learningSection3}>
+          {/* Redesigned "What will we be Learning?" Section */}
+          <section className={styles.learningIntroSection}>
           <div className={styles.whiteBackground}>
-          <div className={styles.bigBlueText}>What will we be Learning?</div>
-          <div className={styles.headingText}> The Daily Illini's Reading Corner</div>
-          <ul className={styles.objectivesList}>
-              <li>Google Sidelines Engineer Who Claims Its A.I. Is Sentient | The New York Times</li>
-              <li>COMPUTING MACHINERY AND INTELLIGENCE | Alan Turing - Pages 1 - 8</li>
-              <li>Teaching robots right from wrong | Science News Explores</li>
-              <li>A Case for Robot Disobedience | Scientific American</li>
-              <li>Robotic police dogs: Useful hounds or dehumanizing machines? | AP News</li>
-              <li>The Ethics of Self-Driving Cars | John Hopkins Magazine</li>
-              <li>Serious Concerns That AI Self-Driving Cars Cybersecurity Will Be A Hacker Leak Like An Open Sieve | Forbes</li>
-              <li>Does AI Know What an Apple Is? She Aims to Find Out | Quantamagazine</li>
-          </ul>
-          <div className={styles.headingText}> The Daily Illini's Coffee Chats</div>
-          <ul className={styles.objectivesList}>
-              <li>Google Sidelines Engineer Who Claims Its A.I. Is Sentient | The New York Times - Questions</li>
-              <li>COMPUTING MACHINERY AND INTELLIGENCE | Alan Turing - Pages 1 - 8 - Questions</li>
-              <li>Teaching robots right from wrong | Science News Explores - Questions</li>
-              <li>A Case for Robot Disobedience | Scientific American - Questions</li>
-              <li>Robotic police dogs: Useful hounds or dehumanizing machines? | AP News - Questions</li>
-              <li>The Ethics of Self-Driving Cars | John Hopkins Magazine - Questions</li>
-              <li>Serious Concerns That AI Self-Driving Cars Cybersecurity Will Be A Hacker Leak Like An Open Sieve | Forbes - Questions</li>
-              <li>Does AI Know What an Apple Is? She Aims to Find Out | Quantamagazine - Questions</li>
-          </ul>
-          <div className={styles.headingText}>A Show in Foellinger Auditorium!</div>
-            <ul className={styles.objectivesList}>
-              <li>Google's AI Sentience: How Close Are We Really? | WSJ Tech News Briefing | 7:35</li>
-              <li>Two AIs Have An Existential Crisis (GPT-3) | Decycle | 5:58</li>
-              <li>Artifical Intelligence & Personhood: Crash Course Philosophy #23 | Crash Course | 9:26</li>
-              <li>The Ethical Dilemma of Self-Drivin Cars - Patrick Lin | Poiesis | 4:16</li>
-              <li>What Moral Decisions Should Driverless Cars Make? | TED | 13:26</li>
-            </ul>
-                <div className={styles.headingText}>Foellinger Showing's Dinner Talks</div>
-            <ul className={styles.objectivesList}>
-              <li>Google's AI Sentience: How Close Are We Really? | WSJ Tech News Briefing | 7:35 - Questions</li>
-              <li>Two AIs Have An Existential Crisis (GPT-3) | Decycle | 5:58</li>
-              <li>Artifical Intelligence & Personhood: Crash Course Philosophy #23 | Crash Course | 9:26 - Questions</li>
-              <li>The Ethical Dilemma of Self-Drivin Cars - Patrick Lin | Poiesis | 4:16 - Questions</li>
-              <li>What Moral Decisions Should Driverless Cars Make? | TED | 13:26 - Questions</li>
-            </ul>
-          <div className={styles.headingText}>Practice Makes Perfect! Practice Makes Perfect!</div>
-          <ul className={styles.objectivesList}>
-              <li>Project 1: Moral Machine</li>
-          </ul>
+            <div className={styles.bigBlueText}>What will we be Learning?</div>
+            <div className={styles.learningIntroImageWrapper}>
+              <img src="/CS+Ling.jpg" alt="CS + Linguistics" className={styles.learningIntroImage} />
+            </div>
+            <div className={styles.learningNavLinks}>
+              <a href="#news-corner" className={styles.learningNavLink}>Reading Corner</a>
+              <a href="#coffee-chats" className={styles.learningNavLink}>Coffee Chats</a>
+              <a href="#audience-section" className={styles.learningNavLink}>Show in Foellinger</a>
+              <a href="#practice-project-section" className={styles.learningNavLink}>Practice Project</a>
+            </div>
+            <div id="reading-corner" className={styles.learningSectionBlock}>
+              <div className={styles.headingText}>📰 The Daily Illini's Reading Corner</div>
+              <ul className={styles.objectivesList}>
+                <li>
+                  <strong>OpenAI's Realistic Text-Generating AI Triggers Ethics Concerns</strong> <br />
+                  Explore the ethical challenges of advanced text-generating AI. <br />
+                  <a href="/pdfs/openai-ethics.pdf" target="_blank" className={styles.learnMoreLink}>Read Article</a>
+                </li>
+                <li>
+                  <strong>Why a Conversation With Bing's Chatbot Left Me Deeply Unsettled</strong> <br />
+                  Discover the surprising effects of chatbot conversations. <br />
+                  <a href="/pdfs/bing-chatbot.pdf" target="_blank" className={styles.learnMoreLink}>Read Article</a>
+                </li>
+                <li>
+                  <strong>How to make a chatbot that isn't racist or sexist</strong> <br />
+                  Learn about building fair and safe chatbots. <br />
+                  <a href="https://www.technologyreview.com/2020/10/23/1011116/chatbot-gpt3-openai-facebook-google-safety-fix-racist-sexist-language-ai/" target="_blank" className={styles.learnMoreLink}>Read Article</a>
+                </li>
+                <li>
+                  <strong>Stanford researchers find that automated speech recognition is more likely to misinterpret black speakers</strong> <br />
+                  Examine bias in speech recognition technology. <br />
+                  <a href="https://news.stanford.edu/stories/2020/03/automated-speech-recognition-less-accurate-blacks/" target="_blank" className={styles.learnMoreLink}>Read Article</a>
+                </li>
+                <li>
+                  <strong>Jazmia Henry: Building Inclusive NLP</strong> <br />
+                  See how NLP can be made more inclusive. <br />
+                  <a href="https://hai.stanford.edu/news/jazmia-henry-building-inclusive-nlp" target="_blank" className={styles.learnMoreLink}>Read Article</a>
+                </li>
+                <li>
+                  <strong>How Movie Magic Could Help Translate for Deaf Students</strong> <br />
+                  Discover how avatars can translate words into sign language. <br />
+                  <a href="https://slate.com/technology/2017/05/computer-avatars-can-translate-written-spoken-words-into-sign-language.html" target="_blank" className={styles.learnMoreLink}>Read Article</a>
+                </li>
+                <li>
+                  <strong>Protecting Indigenous Languages Using Automatic Speech Recognition</strong> <br />
+                  Learn how technology helps preserve endangered languages. <br />
+                  <a href="https://news.northeastern.edu/2021/10/08/protecting-indigenous-languages-using-automatic-speech-recognition/" target="_blank" className={styles.learnMoreLink}>Read Article</a>
+                </li>
+                <li>
+                  <strong>Language Preservation Efforts Get an AI Boost</strong> <br />
+                  See how AI is supporting language preservation. <br />
+                  <a href="https://home.dartmouth.edu/news/2025/04/language-preservations-efforts-get-ai-boost/" target="_blank" className={styles.learnMoreLink}>Read Article</a>
+                </li>
+              </ul>
+            </div>
+            <div id="foellinger-show" className={styles.learningSectionBlock}>
+              <div className={styles.headingText}>🎬 A Show in Foellinger Auditorium!</div>
+              <ul className={styles.objectivesList}>
+                <li>
+                  <strong>Natural Language Processing: Crash Course Computer Science #36 | 11:50</strong> <br />
+                  Watch an introduction to NLP and its applications.
+                </li>
+                <li>
+                  <strong>Computational Linguistics: Crash Course Linguistics #15 | 11:23</strong> <br />
+                  Learn about computational linguistics and how computers understand language.
+                </li>
+              </ul>
+            </div>
+            <div id="practice-project-section-overview" className={styles.learningSectionBlock}>
+              <div className={styles.headingText}>🎵 Practice Makes Perfect!</div>
+              <ul className={styles.objectivesList}>
+                <li>
+                  <strong>Project 1: Trees</strong> <br />
+                  Explore grammar and computer science with tree structures. <br />
+                  <a href="/Projects/P1" className={styles.learnMoreLink}>Start Project</a>
+                </li>
+                <li>
+                  <strong>Project 2: Introduction to Silly Sentences</strong> <br />
+                  Create silly sentences in Python using Google Colab or CodeHS. <br />
+                  <a href="https://colab.research.google.com/drive/1KKWe6JeNokMT6wOarSsxLLY_9iPszjvv?usp=sharing" target="_blank" className={styles.learnMoreLink}>Google Colab</a>
+                  {" | "}
+                  <a href="https://codehs.com/sandbox/id/silly-sentences-introduction-aYcDUr?collaborate=-OLF5CoIwO67zIrTzK9a" target="_blank" className={styles.learnMoreLink}>CodeHS</a>
+                </li>
+                <li>
+                  <strong>Project 3: Silly Sentences (no recursion) Project</strong> <br />
+                  Generate more complex silly sentences. <br />
+                  <a href="https://colab.research.google.com/drive/1lMtIJ2yu_-knFdatbSQFtC1VrNtuKv6y?usp=sharing" target="_blank" className={styles.learnMoreLink}>Google Colab</a>
+                  {" | "}
+                  <a href="https://codehs.com/sandbox/id/silly-sentences-tutorial-dExypa" target="_blank" className={styles.learnMoreLink}>CodeHS</a>
+                  {" | "}
+                  <a href="https://codehs.com/sandbox/id/silly-sentences-completed-HYdtSf" target="_blank" className={styles.learnMoreLink}>CodeHS Solutions</a>
+                </li>
+                <li>
+                  <strong>Project 4: Haiku</strong> <br />
+                  Generate Japanese-style haiku poems using code. <br />
+                  <a href="https://colab.research.google.com/drive/1IdjoH17j85G0ua5U6JEeb8WGTnw20eNH?usp=sharing" target="_blank" className={styles.learnMoreLink}>Google Colab</a>
+                  {" | "}
+                  <a href="https://codehs.com/sandbox/id/haiku-tutorial-Dztmqr" target="_blank" className={styles.learnMoreLink}>CodeHS</a>
+                  {" | "}
+                  <a href="https://codehs.com/sandbox/id/haiku-generator-completed-wFsAJi" target="_blank" className={styles.learnMoreLink}>CodeHS Solutions</a>
+                  {" | "}
+                  <a href="https://colab.research.google.com/drive/1UJYQKd3XMlcLaQL3HnJ5ePZJxRU0-yjb?usp=sharing" target="_blank" className={styles.learnMoreLink}>Google Colab Solutions</a>
+                </li>
+                <li>
+                  <strong>Project 5: Frank Goes to Japan</strong> <br />
+                  Determine syllables in words and generate haiku with your own words. <br />
+                  <a href="https://colab.research.google.com/drive/19QTefxWfYsePvtgSEuKj95Y5X9auRTGS?usp=drive_link" target="_blank" className={styles.learnMoreLink}>Google Colab Short</a>
+                  {" | "}
+                  <a href="https://colab.research.google.com/drive/15va1fNDz6S7QirGLvHTy84fdKdL38kNs?usp=sharing" target="_blank" className={styles.learnMoreLink}>Google Colab Long</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          </section>
+        </section>
 
           <div style={{ padding: "3vh" }}></div>
 
           {/* NewsCorner Section */}
-          
-          <section className={styles.newsCornerSection}>
+          <section id="news-corner" className={styles.newsCornerSection}>
             <img
               src="/Daily Illini.png"
               alt="Daily Illini"
@@ -316,8 +358,7 @@ export default function Phil() {
           <div style={{ padding: "3vh" }}></div>
 
           {/* CoffeeChats Section */}
-
-          <section className={styles.news2Section}>
+          <section id="coffee-chats" className={styles.news2Section}>
             <img
               src="/coffeechats.png"
               alt="questions"
@@ -353,8 +394,7 @@ export default function Phil() {
           <div style={{ padding: "3vh" }}></div>
 
           {/* Movie Time */}
-
-          <section className={styles.audienceSection}>
+          <section id="audience-section" className={styles.audienceSection}>
             <img
               src="/foecircle.png"
               alt="FOE Circle"
@@ -373,7 +413,6 @@ export default function Phil() {
           <div style={{ padding: "3vh" }}></div>
 
           {/* Foellinger Time */}
-
           <section className={styles.carouselSection}>
             <div className={styles.carouselOverlay}>
               <div className={styles.carouselVideoWrapper}>
@@ -402,7 +441,6 @@ export default function Phil() {
           <div style={{ padding: "3vh" }}></div>
 
           {/* Dinner Talks Section */}
-
           <section className={styles.dinnerSection}>
             <img
               src="/Dinner talks.png"
@@ -439,7 +477,6 @@ export default function Phil() {
           <div style={{ padding: "3vh" }}></div>
 
           {/* Let's learn section */}
-
           <section className={styles.learningSection}>
             <div className={styles.learningText}>Let's do some learning!</div>
             <img
@@ -452,8 +489,7 @@ export default function Phil() {
           <div style={{ padding: "3vh" }}></div>
 
           {/* Learning Section */}
-
-          <section className={styles.learningSection2}>
+          <section id="practice-project-section" className={styles.learningSection2}>
             <div className={styles.practiceText}>Practice Makes Perfect! <br /> Practice Makes Perfect!</div>
           
             <div style={{ padding: "3vh" }}></div>
@@ -592,3 +628,4 @@ export default function Phil() {
     </>
   );
 }
+

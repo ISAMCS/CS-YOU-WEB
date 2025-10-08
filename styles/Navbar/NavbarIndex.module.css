@@ -11,23 +11,22 @@
 }
 
 .navbar {
-  font-family: "Finger Paint";
+  font-family: 'Finger Paint';
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: clamp(40vh, 50vmin, 70vh);
   z-index: 2000;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding-top: clamp(8vh, 5vw, 20vh);
+  padding-top: 5vh;
   background-color: transparent;
   background-image: url('/Siebel.jpg');
   background-size: cover;
+  background-position: 100% 50%;
   background-repeat: no-repeat;
   box-shadow: none;
-  background-position: 70% 50%;
 }
 
 .navbarPC {

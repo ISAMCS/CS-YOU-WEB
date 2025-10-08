@@ -1,0 +1,42 @@
+.exploreContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  min-height: 0;
+  height: auto;
+  padding-bottom: 2rem;
+}
+
+.exploreTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #2a2a7a;
+}
+
+.exploreLink {
+  display: inline-block;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: box-shadow 0.2s;
+}
+
+.exploreImage {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 2rem;
+  transition: transform 0.2s;
+  cursor: pointer;
+  display: block;
+  margin-left: 0;
+  margin-right: 100%;
+  background-color: white;
+}
+
+.exploreImage:hover {
+  transform: scale(1.05);
+}

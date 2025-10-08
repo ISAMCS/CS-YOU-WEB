@@ -102,35 +102,95 @@ export default function Home() {
 
           <div style={{ padding: "3vh" }}></div>
 
-          {/* First Part */}
+          {/* Redesigned "What will we be Learning?" Section */}
 
-          <section className={styles.imageWrapper}>
-          <img src="/cropsciences-banner.png" alt="crop" className={styles.bannerImage} />
-          <img src="/CS+Crop_Sciences.jpg" alt="CS + Crop" className={styles.firstImage} />
-          <div className={styles.scrollContainer}>
-              <div className={styles.scrollTextLeft}>Scroll</div>
-              <div className={styles.scrollTextRight}>Down</div>
-          </div>
-          <div
-              className={`${styles.arrowContainer} ${
-              showArrow ? styles.arrowVisible : ''
-              }`}
-          >
-              {/* Replace Arrow component with PNG */}
-              <img
-              src="/ArrowBlue.png"
-              alt="Scroll Down Arrow"
-              className={styles.longArrow}
-              />
-          </div>
+          <section id="intro-section" className={styles.learningIntroSection}>
+            <div className={styles.whiteBackground}>
+              <div className={styles.bigBlueText}>What will we be Learning?</div>
+              <div className={styles.learningIntroImageWrapper}>
+                <img src="/CS+Crop_Sciences.jpg" alt="Crop Sciences" className={styles.learningIntroImage} />
+              </div>
+              <div className={styles.learningNavLinks}>
+                <a href="#audience-section" className={styles.learningNavLink}>Show in Foellinger</a>
+                <a href="#dinner-talks" className={styles.learningNavLink}>Dinner Talks</a>
+                <a href="#practice-project-section" className={styles.learningNavLink}>Practice Project</a>
+              </div>
+              <div id="foellinger-show" className={styles.learningSectionBlock}>
+                <div className={styles.headingText}>🎬 A Show in Foellinger Auditorium!</div>
+                <ul className={styles.objectivesList}>
+                  <li>
+                    <strong>Drones in Agriculture | PBS | 3:55</strong> <br />
+                    Watch how drones are used in modern farming.
+                  </li>
+                  <li>
+                    <strong>Sniper Robot Treats 500k Plants Per Hour | Freethink | 8:16</strong> <br />
+                    See robotics in action for sustainable agriculture.
+                  </li>
+                  <li>
+                    <strong>How Robots Are Saving the Dairy Farm | Bloomberg Originals | 5:14</strong> <br />
+                    Learn about automation on dairy farms.
+                  </li>
+                  <li>
+                    <strong>Computer Vision for Precision Livestock | Precision Livestock Farming | 1:50</strong> <br />
+                    Discover computer vision applications in livestock management.
+                  </li>
+                </ul>
+              </div>
+              <div id="dinner" className={styles.learningSectionBlock}>
+                <div className={styles.headingText}>🍿 Foellinger Showing's Dinner Talks</div>
+                <ul className={styles.objectivesList}>
+                  <li>
+                    <strong>Drones in Agriculture - Questions</strong> <br />
+                    Discuss how drones and technology affect crop yield and farming.
+                  </li>
+                  <li>
+                    <strong>Sniper Robots - Questions</strong> <br />
+                    Explore the impact of robotics and machine learning on sustainability.
+                  </li>
+                  <li>
+                    <strong>Robots on Dairy Farms - Questions</strong> <br />
+                    Consider how automation changes livestock care and farm management.
+                  </li>
+                  <li>
+                    <strong>Precision Livestock Farming - Questions</strong> <br />
+                    Reflect on computer vision features and their benefits for farmers.
+                  </li>
+                </ul>
+              </div>
+              <div id="practice-project" className={styles.learningSectionBlock}>
+                <div className={styles.headingText}>🎵 Practice Makes Perfect!</div>
+                <ul className={styles.objectivesList}>
+                  <li>
+                    <strong>Project 1: Beetle Bot</strong><br />
+                    Program a beetle to navigate obstacles, simulating a machine traversing crops.<br />
+                    <a
+                      href="https://scratch.mit.edu/projects/678075333/editor/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.learnMoreLink}
+                    >
+                      Start Project
+                    </a>
+                  </li>
+                  <li>
+                    <strong>Project 2: Teacher Project - Drone Pirate's Treasure Hunt</strong><br />
+                    Use Scratch to fly a drone across a city and find hidden treasures.<br />
+                    <a
+                      href="https://forum.creaticode.com/topic/323/3d-a-flying-drone-difficulty-1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.learnMoreLink}
+                    >
+                      Tutorial
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </section>
 
-          <div style={{ padding: "3vh" }}></div>
-
-          {/* What will we be Learning Section? */}
-
-          <section className={styles.learningSection3}>
-          <div className={styles.whiteBackground}>
+          <section id="foellinger-show-section" className={styles.learningSection3}>
+            <div className={styles.whiteBackground}>
           <div className={styles.bigBlueText}>What will we be Learning?</div>
           <div className={styles.headingText}>A Show in Foellinger Auditorium!</div>
             <ul className={styles.objectivesList}>
@@ -158,7 +218,7 @@ export default function Home() {
 
             {/* Movie Time */}
 
-          <section className={styles.audienceSection}>
+          <section id="audience-section" className={styles.audienceSection}>
             <img
               src="/foecircle.png"
               alt="FOE Circle"
@@ -178,7 +238,7 @@ export default function Home() {
               
           {/* Foellinger Time */}
 
-          <section className={styles.carouselSection}>
+          <section id="carousel-section" className={styles.carouselSection}>
             <div className={styles.carouselOverlay}>
               <div className={styles.carouselVideoWrapper}>
               {youtubeVideos[currentVideo].endsWith('.mp4') ? (
@@ -217,7 +277,7 @@ export default function Home() {
 
           {/* Dinner Talks Section */}
 
-          <section className={styles.dinnerSection}>
+          <section id="dinner-talks" className={styles.dinnerSection}>
             <img
               src="/Dinner talks.png"
               alt="questions"
@@ -254,7 +314,7 @@ export default function Home() {
 
             {/* Let's learn section */}
 
-          <section className={styles.learningSection}>
+          <section id="lets-learn-section" className={styles.learningSection}>
             <div className={styles.learningText}>Let's do some learning!</div>
             <img
               src="/farmer.png"
@@ -267,7 +327,7 @@ export default function Home() {
 
           {/* Learning Section */}
 
-          <section className={styles.learningSection2}>
+          <section id="practice-project-section" className={styles.learningSection2}>
             <div className={styles.practiceText}>Practice Makes Perfect! <br /> Practice Makes Perfect!</div>
 
               <div style={{ padding: "3vh" }}></div>
@@ -397,7 +457,6 @@ export default function Home() {
               </div>
             </div>
           </footer>
-          
 
         </div>
     </>

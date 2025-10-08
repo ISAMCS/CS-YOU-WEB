@@ -9,6 +9,7 @@ import rayaHeadshot from "public/Raya.png";
 import kathleenHeadshot from "public/Kathleen.png";
 import maxHeadshot from "public/Max.jpeg";
 import lennyHeadshot from "public/Lenny.png";
+import BackgroundLayout from "/components/Index/CSIntroSection.js";
 import Link from "next/link";
 
 const carouselImages = [
@@ -66,20 +67,7 @@ const Home = () => {
       {/* Main Content Section */}
       
         <div className={styles.indexMainContent}>
-          <div className={styles.leftSection}>
-            <a href="/chart.png" target="_blank" rel="noopener noreferrer">
-              <img src="/chart.png" alt="Chart" className={styles.chartImage} />
-            </a>
-          </div>
-          <div className={styles.rightSection}>
-            <h2>About Our Mission</h2>
-            <p>UIUC seeks to create an interactive and engaging website for the K12 audience to learn about computer science and its various applications!</p>
-            <Link href="/Csplusx" passHref legacyBehavior>
-              <button className={styles.exploreButton}>
-                Explore CS + X
-              </button>
-            </Link>
-          </div>
+          <BackgroundLayout />
         </div>
 
       <div style={{ padding: "5vh" }}></div>

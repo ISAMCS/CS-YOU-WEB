@@ -149,67 +149,96 @@ export default function Music() {
 
           <div style={{ padding: "3vh" }}></div>
 
-          {/* First Part */}
-
-          <section className={styles.imageWrapper}>
-            <img src="/music-banner.png" alt="Mus" className={styles.bannerImage} />
-            <img src="/CS+music.jpg" alt="CS + Mus" className={styles.firstImage} />
-            <div className={styles.scrollContainer}>
-              <div className={styles.scrollTextLeft}>Scroll</div>
-              <div className={styles.scrollTextRight}>Down</div>
-            </div>
-            <div
-              className={`${styles.arrowContainer} ${
-                showArrow ? styles.arrowVisible : ''
-              }`}
-            >
-              {/* Replace Arrow component with PNG */}
-              <img
-                src="/ArrowBlue.png"
-                alt="Scroll Down Arrow"
-                className={styles.longArrow}
-              />
-            </div>
-          </section>
-
-          <div style={{ padding: "3vh" }}></div>
-
-          {/* What will we be Learning Section? */}
-
-          <section className={styles.learningSection3}>
-          <div className={styles.whiteBackground}>
-          <div className={styles.bigBlueText}>What will we be Learning?</div>
-          <div className={styles.headingText}> The Daily Illini's Reading Corner</div>
-          <ul className={styles.objectivesList}>
-              <li>Robots Can Make Music, but Can They Sing? | The New York Times</li>
-              <li>The Moog Synthesizer Makes a Comeback | The New York Times</li>
-              <li>From Jingles to Pop Hits, A.I. Is Music to Some Ears | The New York Times</li>
-              <li>MUSIC; Teaching the Ear New Dialects of Sound | The New York Times</li>
-          </ul>
-          <div className={styles.headingText}> The Daily Illini's Coffee Chats</div>
-          <ul className={styles.objectivesList}>
-              <li>Robots Can Make Music, but Can They Sing | The New York Times - Questions</li>
-              <li>The Moog Synthesizer Makes a Comeback | The New York Times - Questions</li>
-              <li>From Jingles to Pop Hits, A.I. Is Music to Some Ears | The New York Times - Questions</li>
-              <li>MUSIC; Teaching the Ear New Dialects of Sound | The New York Times - Questions</li>
-          </ul>
-          <div className={styles.headingText}>A Show in Foellinger Auditorium!</div>
-            <ul className={styles.objectivesList}>
-              <li>Performance Systems | Kathleen Issenger | 24:17</li>
-              <li>Music Synthesis | Kathleen Isseneger | 11:14</li>
-            </ul>
-          <div className={styles.headingText}>Practice Makes Perfect! Practice Makes Perfect!</div>
-          <ul className={styles.objectivesList}>
-              <li>Project 1: Tune Pad</li>
-          </ul>
-          </div>
-          </section>
+          {/* Redesigned "What will we be Learning?" Section */}
+          <section className={styles.learningIntroSection}>
+  <div className={styles.whiteBackground}>
+    <div className={styles.bigBlueText}>What will we be Learning?</div>
+    <div className={styles.learningIntroImageWrapper}>
+      <img src="/CS+music.jpg" alt="CS + Music" className={styles.learningIntroImage} />
+    </div>
+    <div className={styles.learningNavLinks}>
+      <a href="#news-corner" className={styles.learningNavLink}>Reading Corner</a>
+      <a href="#news2-section" className={styles.learningNavLink}>Coffee Chats</a>
+      <a href="#audience-section" className={styles.learningNavLink}>Show in Foellinger</a>
+      <a href="#practice-project-section" className={styles.learningNavLink}>Practice Project</a>
+    </div>
+    <div id="reading-corner" className={styles.learningSectionBlock}>
+      <div className={styles.headingText}>📰 The Daily Illini's Reading Corner</div>
+      <ul className={styles.objectivesList}>
+        <li>
+          <strong>Robots Can Make Music, but Can They Sing?</strong> <br />
+          Explore how AI and robots are changing music creation and performance. <br />
+          <a href="/pdfs/robots-music.pdf" target="_blank" className={styles.learnMoreLink}>Read Article</a>
+        </li>
+        <li>
+          <strong>The Moog Synthesizer Makes a Comeback</strong> <br />
+          Discover the story behind the iconic Moog synthesizer and its influence on modern music. <br />
+          <a href="/pdfs/moog-synthesizer.pdf" target="_blank" className={styles.learnMoreLink}>Read Article</a>
+        </li>
+        <li>
+          <strong>From Jingles to Pop Hits, A.I. Is Music to Some Ears</strong> <br />
+          Learn how AI is used to compose music, from commercials to popular songs. <br />
+          <a href="pdfs/ai-music-jingles.pdf" target="_blank" className={styles.learnMoreLink}>Read Article</a>
+        </li>
+        <li>
+          <strong>MUSIC; Teaching the Ear New Dialects of Sound</strong> <br />
+          Understand how technology is expanding the boundaries of musical sound and listening. <br />
+          <a href="pdfs/ear-dialects.pdf" target="_blank" className={styles.learnMoreLink}>Read Article</a>
+        </li>
+      </ul>
+    </div>
+    <div id="coffee-chats" className={styles.learningSectionBlock}>
+      <div className={styles.headingText}>☕ The Daily Illini's Coffee Chats</div>
+      <ul className={styles.objectivesList}>
+        <li>
+          <strong>Robots Can Make Music, but Can They Sing? - Questions</strong> <br />
+          Thought-provoking questions about AI and music for group discussion.
+        </li>
+        <li>
+          <strong>The Moog Synthesizer Makes a Comeback - Questions</strong> <br />
+          Dive deeper into the Moog story with questions on technology and creativity.
+        </li>
+        <li>
+          <strong>From Jingles to Pop Hits, A.I. Is Music to Some Ears - Questions</strong> <br />
+          Discuss the impact of AI on music creation and copyright.
+        </li>
+        <li>
+          <strong>MUSIC; Teaching the Ear New Dialects of Sound - Questions</strong> <br />
+          Explore new musical ideas and technology through guided questions.
+        </li>
+      </ul>
+    </div>
+    <div id="foellinger-show" className={styles.learningSectionBlock}>
+      <div className={styles.headingText}>🎬 A Show in Foellinger Auditorium!</div>
+      <ul className={styles.objectivesList}>
+        <li>
+          <strong>Performance Systems | Kathleen Issenger | 24:17</strong> <br />
+          Watch a live demonstration of performance technology in music.
+        </li>
+        <li>
+          <strong>Music Synthesis | Kathleen Isseneger | 11:14</strong> <br />
+          Learn about the basics of music synthesis and its creative possibilities.
+        </li>
+      </ul>
+    </div>
+    <div id="practice-project" className={styles.learningSectionBlock}>
+      <div className={styles.headingText}>🎵 Practice Makes Perfect!</div>
+      <ul className={styles.objectivesList}>
+        <li>
+          <strong>Project 1: Tune Pad</strong> <br />
+          Create your own music using Python and TunePad. <br />
+          <a href="https://docs.google.com/document/d/1UuN2d8ikuFS9PHxK4bhcRfni1IS-1w8yKAZk1hksHHc/view" target="_blank" className={styles.learnMoreLink}>Start Project</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
           <div style={{ padding: "3vh" }}></div>
 
           {/* NewsCorner Section */}
           
-          <section className={styles.newsCornerSection}>
+          <section id="news-corner" className={styles.newsCornerSection}>
             <img
               src="/Daily Illini.png"
               alt="Daily Illini"
@@ -243,7 +272,7 @@ export default function Music() {
 
           {/* CoffeeChats Section */}
 
-          <section className={styles.news2Section}>
+          <section id="news2-section" className={styles.news2Section}>
             <img
               src="/coffeechats.png"
               alt="questions"
@@ -280,7 +309,7 @@ export default function Music() {
 
           {/* Movie Time */}
 
-          <section className={styles.audienceSection}>
+          <section id="audience-section" className={styles.audienceSection}>
 
             <img
               src="/foecircle.png"
@@ -360,7 +389,7 @@ export default function Music() {
 
           {/* Learning Section */}
 
-          <section className={styles.learningSection2}>
+          <section id="practice-project-section" className={styles.learningSection2}>
             <div className={styles.practiceText}>Practice Makes Perfect! <br /> Practice Makes Perfect!</div>
             <div className={styles.instructionText}>
               Please Make a Copy of the Google Doc by going to "File" and "Save a Copy in Drive"

@@ -54,7 +54,7 @@ const news2Articles = [
     ]
   },
   {
-    title: "OComputational Advertising: A Smarter Way to Automate Advertising | Medium 1",
+    title: "Computational Advertising: A Smarter Way to Automate Advertising | Medium 1",
     text: [
       "What is Real-Time Bidding (RTB), and how does it use instant auctions to decide which ad is displayed when you open a webpage?",
       "Describe the roles of the Demand-Side Platform (DSP) and the Supply-Side Platform (SSP) in programmatic advertising. How do they work together (via an ad exchange) to automate the buying and selling of ad space?",
@@ -133,72 +133,111 @@ export default function Home() {
 
           <div style={{ padding: "3%" }}></div>
 
-          {/* First Part */}
-
-          <section className={styles.imageWrapper}>
-          <img src="/advertising-banner.png" alt="Ad" className={styles.bannerImage} />
-          <img src="/CS+Adverising.jpg" alt="CS + Ad" className={styles.firstImage} />
-          <div className={styles.scrollContainer}>
-              <div className={styles.scrollTextLeft}>Scroll</div>
-              <div className={styles.scrollTextRight}>Down</div>
-          </div>
-          <div
-              className={`${styles.arrowContainer} ${
-              showArrow ? styles.arrowVisible : ''
-              }`}
-          >
-              {/* Replace Arrow component with PNG */}
-              <img
-              src="/ArrowBlue.png"
-              alt="Scroll Down Arrow"
-              className={styles.longArrow}
-              />
-          </div>
-          </section>
-
-          <div style={{ padding: "2%" }}></div>
-
           {/* What will we be Learning Section? */}
-
-          <section className={styles.learningSection3}>
-          <div className={styles.whiteBackground}>
-          <div className={styles.bigBlueText}>What will we be Learning?</div>
-          <div className={styles.headingText}> The Daily Illini's Reading Corner</div>
-          <ul className={styles.objectivesList}>
-              <li>How Recommedation Algorithms Run the World | WIRED</li>
-              <li>Opinion - You Are Now Remotely Controlled | The New York Times</li>
-              <li>Computational Advertising: A Smarter Way to Automate Advertising | Medium</li>
-              <li>Opinion - You Are the Object of Facebook's Secret Extraction Operation | The New York Times</li>
-          </ul>
-          <div className={styles.headingText}> The Daily Illini's Coffee Chats</div>
-          <ul className={styles.objectivesList}>
-              <li>How Recommedation Algorithms Run the World | WIRED - Questions</li>
-              <li>Opinion - You Are Now Remotely Controlled | The New York Times - Questions</li>
-              <li>Computational Advertising: A Smarter Way to Automate Advertising | Medium - Questions</li>
-              <li>Opinion - You Are the Object of Facebook's Secret Extraction Operation | The New York Times - Questions</li>
-          </ul>
-          <div className={styles.headingText}>A Show in Foellinger Auditorium!</div>
-            <ul className={styles.objectivesList}>
-              <li>How Targeted Advertising Works | Consumer Reports | 4:07 </li>
-              <li>How YouTube knows what you should watch | Crash Course AI #15 | 10:51 </li>
-              <li>Targeted Ads: The Dark Side of Divulging Your Data | Iluli by Mike Lamb | 5:10</li>
-              <li>What is Surveillance Capitalism? | Poiesis | 8:04</li>
-            </ul>
-          <div className={styles.headingText}>Foellinger Showing's Dinner Talks</div>
-            <ul className={styles.objectivesList}>
-              <li>How Targeted Advertising Works | Consumer Reports | 4:07 - Questions</li>
-              <li>How YouTube knows what you should watch | Crash Course AI #15 | 10:51 - Questions </li>
-              <li>Targeted Ads: The Dark Side of Divulging Your Data | Iluli by Mike Lamb | 5:10 - Questions</li>
-              <li>What is Surveillance Capitalism? | Poiesis | 8:04 - Questions</li>
-            </ul>
-          </div>
+          
+          <section className={styles.learningIntroSection}>
+            <div className={styles.whiteBackground}>
+              <div className={styles.bigBlueText}>What will we be Learning?</div>
+              <div className={styles.learningNavLinks}>
+                <a href="#news-corner" className={styles.learningNavLink}>Reading Corner</a>
+                <a href="#coffee-chats" className={styles.learningNavLink}>Coffee Chats</a>
+                <a href="#foellinger-show" className={styles.learningNavLink}>Show in Foellinger</a>
+                <a href="#dinner-talks" className={styles.learningNavLink}>Dinner Talks</a>
+              </div>
+              <div id="reading-corner" className={styles.learningSectionBlock}>
+                <div className={styles.headingText}>📰 The Daily Illini's Reading Corner</div>
+                <ul className={styles.objectivesList}>
+                  <li>
+                    <strong>How Recommendation Algorithms Run the World</strong> <br />
+                    Explore how algorithms shape our digital experiences and influence what we see online. <br />
+                    <a href="/pdfs/recommendation-algorithms.pdf" target="_blank" className={styles.learnMoreLink}>Read Article</a>
+                  </li>
+                  <li>
+                    <strong>Opinion - You Are Now Remotely Controlled</strong> <br />
+                    Learn about surveillance capitalism and its impact on our privacy and autonomy. <br />
+                    <a href="/pdfs/remotely-controlled.pdf" target="_blank" className={styles.learnMoreLink}>Read Article</a>
+                  </li>
+                  <li>
+                    <strong>Computational Advertising: A Smarter Way to Automate Advertising</strong> <br />
+                    Discover how advertising is automated and personalized using computational techniques. <br />
+                    <a href="https://medium.com/%40su-paris/computational-advertising-a-smarter-way-to-automate-advertising-665add0f8509" target="_blank" className={styles.learnMoreLink}>Read Article</a>
+                  </li>
+                  <li>
+                    <strong>Opinion - You Are the Object of Facebook's Secret Extraction Operation</strong> <br />
+                    Understand how social media platforms extract and use your data. <br />
+                    <a href="/pdfs/facebook-extraction.pdf" target="_blank" className={styles.learnMoreLink}>Read Article</a>
+                  </li>
+                </ul>
+              </div>
+              <div id="coffee-chats-overview" className={styles.learningSectionBlock}>
+                <div className={styles.headingText}>☕ The Daily Illini's Coffee Chats</div>
+                <ul className={styles.objectivesList}>
+                  <li>
+                    <strong>How Recommendation Algorithms Run the World - Questions</strong> <br />
+                    Discuss transparency and the future of recommendation systems.
+                  </li>
+                  <li>
+                    <strong>Opinion - You Are Now Remotely Controlled - Questions</strong> <br />
+                    Explore the concept of surveillance capitalism and its effects.
+                  </li>
+                  <li>
+                    <strong>Computational Advertising: A Smarter Way to Automate Advertising - Questions</strong> <br />
+                    Dive into the mechanics of real-time bidding and ad automation.
+                  </li>
+                  <li>
+                    <strong>Opinion - You Are the Object of Facebook's Secret Extraction Operation - Questions</strong> <br />
+                    Consider the social and regulatory implications of data extraction.
+                  </li>
+                </ul>
+              </div>
+              <div id="foellinger-show-overview" className={styles.learningSectionBlock}>
+                <div className={styles.headingText}>🎬 A Show in Foellinger Auditorium!</div>
+                <ul className={styles.objectivesList}>
+                  <li>
+                    <strong>How Targeted Advertising Works | Consumer Reports | 4:07</strong> <br />
+                    See how ads are tailored to you and what it means for privacy.
+                  </li>
+                  <li>
+                    <strong>How YouTube knows what you should watch | Crash Course AI #15 | 10:51</strong> <br />
+                    Learn how YouTube's algorithm recommends content.
+                  </li>
+                  <li>
+                    <strong>Targeted Ads: The Dark Side of Divulging Your Data | Iluli by Mike Lamb | 5:10</strong> <br />
+                    Explore the risks and ethics of sharing personal data online.
+                  </li>
+                  <li>
+                    <strong>What is Surveillance Capitalism? | Poiesis | 8:04</strong> <br />
+                    Understand the concept and impact of surveillance capitalism.
+                  </li>
+                </ul>
+              </div>
+              <div id="dinner-talks-overview" className={styles.learningSectionBlock}>
+                <div className={styles.headingText}>🍿 Foellinger Showing's Dinner Talks</div>
+                <ul className={styles.objectivesList}>
+                  <li>
+                    <strong>How Targeted Advertising Works | Consumer Reports - Questions</strong> <br />
+                    Discuss the pros and cons of targeted advertising.
+                  </li>
+                  <li>
+                    <strong>How YouTube knows what you should watch | Crash Course AI #15 - Questions</strong> <br />
+                    Consider alternative ways to recommend content.
+                  </li>
+                  <li>
+                    <strong>Targeted Ads: The Dark Side of Divulging Your Data - Questions</strong> <br />
+                    Debate laws and ethics around data privacy.
+                  </li>
+                  <li>
+                    <strong>What is Surveillance Capitalism? | Poiesis - Questions</strong> <br />
+                    Reflect on the evolution and impact of surveillance capitalism.
+                  </li>
+                </ul>
+              </div>
+            </div>
           </section>
-
           <div style={{ padding: "2%" }}></div>
 
           {/* NewsCorner Section */}
-        
-          <section className={styles.newsCornerSection}>
+          <section id="news-corner" className={styles.newsCornerSection}>
             <img
               src="/Daily Illini.png"
               alt="Daily Illini"
@@ -231,8 +270,7 @@ export default function Home() {
           <div style={{ padding: "2%" }}></div>
 
           {/* CoffeeChats Section */}
-
-          <section className={styles.news2Section}>
+          <section id="coffee-chats" className={styles.news2Section}>
             <img
               src="/coffeechats.png"
               alt="questions"
@@ -268,8 +306,7 @@ export default function Home() {
           <div style={{ padding: "2%" }}></div>
 
           {/* Movie Time */}
-
-          <section className={styles.audienceSection}>
+          <section id="foellinger-show" className={styles.audienceSection}>
             <img
               src="/foecircle.png"
               alt="FOE Circle"
@@ -288,7 +325,6 @@ export default function Home() {
           <div style={{ padding: "2%" }}></div>
 
           {/* Foellinger Time */}
-
           <section className={styles.carouselSection}>
             <div className={styles.carouselOverlay}>
               <div className={styles.carouselVideoWrapper}>
@@ -317,8 +353,7 @@ export default function Home() {
           <div style={{ padding: "2%" }}></div>
 
           {/* Dinner Talks Section */}
-
-          <section className={styles.dinnerSection}>
+          <section id="dinner-talks" className={styles.dinnerSection}>
             <img
               src="/Dinner talks.png"
               alt="questions"
@@ -354,7 +389,6 @@ export default function Home() {
           <div style={{ padding: "5vh" }}></div>
             
           {/* Footer with Goose and Squirrel */}
-          
           <footer className={styles.footer}>
             <div className={styles.footerContent}>
               © {new Date().getFullYear()} CS + You. All rights reserved.
@@ -386,7 +420,6 @@ export default function Home() {
               </div>
             </div>
           </footer>
-
         </div>
     </>
   );

@@ -5,210 +5,117 @@
   align-items: center;
 }
 
-/* First Part */
+/* Learning Intro Section */
 
-.imageWrapper {
-  position: relative;
-  width: 80vw;
-  max-width: 2000px;
-  aspect-ratio: 16 / 9;
-  min-height: 100px;
-  margin: 0 auto;
-  overflow: hidden;
-  border: clamp(0.1rem, 0.5vw, 0.4rem) solid #000;
-  box-sizing: border-box;
+.learningIntroSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 4vh 0;
+}
+
+.whiteBackground {
   background: #fff;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-}
-
-.bannerImage {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30%;
-  z-index: 4;
-}
-
-.firstImage {
-  position: absolute;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  padding: 3vh 4vw;
+  max-width: 900px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.scrollContainer {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  pointer-events: none;
-  z-index: 3;
-}
-
-.scrollTextLeft,
-.scrollTextRight {
-  position: absolute;
-  top: 0;
-  font-size: clamp(1rem, 2.5vw, 10rem);
-  font-weight: bold;
-  opacity: 0;
-  white-space: nowrap;
-}
-
-.scrollTextLeft {
-  left: 0;
-  color: #FF5F05;
-  animation: fadeInRight 1.5s forwards ease-in-out;
-}
-
-.scrollTextRight {
-  right: 0;
-  color: #0a369c;
-  animation: fadeInLeft 1.5s forwards ease-in-out;
-}
-
-.arrowContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.longArrow {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background-color: transparent;
-  z-index: 1;
-  opacity: 1;
-  margin: 0;
-  padding: 0;
-  display: block;
-  pointer-events: none;
-}
-
-.arrowVisible {
-  opacity: 1;
-}
-
-/* Keyframes for Fade In */
-@keyframes fadeInLeft {
-  0% {
-    transform: translateX(-20%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInRight {
-  0% {
-    transform: translateX(20%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Learning Section*/
-
-.learningSection3 {
-  position: relative;
-  width: 80vw;
-  max-width: 2000px;
-  overflow: visible;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: clamp(1rem, 8vw, 15rem) 0 clamp(1rem, 8vw, 15rem) 0;
-  gap: 32px;
-  border: clamp(0.1rem, 0.5vw, 0.4rem) solid #000;
-  background-image: url("/anthro-background.png");
-  background-size: cover;
-}
-
-.whiteBackground{
-  padding-top: clamp(1rem, 3vw, 10rem);
-  padding-bottom: clamp(1rem, 3vw, 10rem);
-  padding-right: clamp(1rem, 5vw, 10rem);
-  padding-left: clamp(1rem, 5vw, 10rem);
-  width: 85%;
-  height: 80%;
-  background-color: #fff;
-  border: clamp(0.1rem, 0.5vw, 0.4rem) solid #000;
 }
 
 .bigBlueText {
-  font-family: "Finger Paint";
-  font-size: clamp(2rem, 3vw, 6rem);
-  font-weight: bold;
-  padding: clamp(1rem, 2rem, 5rem) clamp(0.5rem, 1vh, 5rem);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a4fa3;
+  margin-bottom: 2vh;
   text-align: center;
-  letter-spacing: 0.04em;
-  color: #0a369c;
-  text-shadow: 0 2px 8px rgba(10, 54, 156, 0.15);
-  width: 100%;
+}
+
+.learningNavLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  margin-bottom: 2vh;
+  flex-wrap: wrap;
+}
+
+.learningNavLink {
+  background: #eaf3ff;
+  color: #1a4fa3;
+  font-weight: 600;
+  padding: 0.7em 1.5em;
+  border-radius: 24px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(26,79,163,0.07);
+  margin-bottom: 0.5em;
+}
+
+.learningNavLink:hover {
+  background: #1a4fa3;
+  color: #fff;
+}
+
+.learningSectionBlock {
+  margin-bottom: 3vh;
+  padding: 2vh 0;
+  border-bottom: 1px solid #e3e3e3;
 }
 
 .headingText {
-  font-family: "Finger Paint";
-  font-size: clamp(1.2rem, 2vw, 3rem);
-  font-weight: 700;
-  color: #e7500f;
-  text-align: center;
-  letter-spacing: 0.05em;
-  max-width: 100%;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a4fa3;
+  margin-bottom: 1vh;
 }
 
 .objectivesList {
-  font-family: "Comic Neue";
-  font-size: clamp(0.9rem, 1.4vw, 3rem);
-  line-height: 1.7;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  width: fit-content;
-  box-sizing: border-box;
-  padding: clamp(1rem, 2rem, 5rem) clamp(2rem, 3vw, 5rem);
-  list-style: disc outside;
-  text-align: left;
-  display: block;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
 }
 
 .objectivesList li {
-  margin-bottom: 0.85rem;
+  margin-bottom: 1.5em;
+  background: #f7faff;
+  border-radius: 12px;
+  padding: 1em 1.2em;
+  box-shadow: 0 1px 6px rgba(26,79,163,0.04);
+  font-size: 1.05rem;
+}
+
+.learnMoreLink {
+  display: inline-block;
+  margin-top: 0.5em;
+  color: #1a4fa3;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.learnMoreLink:hover {
+  color: #0d2c5a;
+}
+
+.learningIntroImageWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2vh;
+}
+
+.learningIntroImage {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(26,79,163,0.10);
+  object-fit: cover;
 }
 
 /* NewsCorner Section */
 
 .newsCornerSection {
   position: relative;
-  width: 80vw;
+  width: 70vw;
   max-width: 2000px;
   background: url('/newcorner.jpg') center/cover no-repeat;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
@@ -335,7 +242,7 @@
 
 .news2Section {
   position: relative;
-  width: 80vw;
+  width: 70vw;
   max-width: 2000px;
   background: url('/news2.jpg') center/cover no-repeat;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
@@ -483,7 +390,7 @@
 
 .audienceSection {
   position: relative;
-  width: 80vw;
+  width: 70vw;
   max-width: 2000px;
   aspect-ratio: 4/3;
   background: url('/audience.jpg') center/cover no-repeat;
@@ -542,7 +449,7 @@
 .carouselSection {
   
   position: relative;
-  width: 80vw;
+  width: 70vw;
   max-width: 2000px;
   aspect-ratio: 16 / 10;
   background: url('/Foe.png') center center no-repeat;
@@ -634,7 +541,7 @@
 
 .dinnerSection {
   position: relative;
-  width: 80vw;
+  width: 70vw;
   max-width: 2000px;
   background: url('/stage.jpg') center/cover no-repeat;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
@@ -781,7 +688,7 @@
 
 .learningSection {
   position: relative;
-  width: 80vw;
+  width: 70vw;
   max-width: 2000px;
   aspect-ratio: 4/2;
   background: #fff;
@@ -840,7 +747,7 @@
 
 .learningSection2 {
   position: relative;
-  width: 80vw;
+  width: 70vw;
   max-width: 2000px;
   overflow: visible;
   display: flex;
@@ -1022,8 +929,7 @@
 
 /* Footer */
 .footer {
-
-  width: 100vw;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
